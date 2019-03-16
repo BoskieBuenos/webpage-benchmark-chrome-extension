@@ -11,5 +11,8 @@
   "permissions": [
     "activeTab"
   ],
+  "icons": {
+    "512": "assets/icon.png"
+  },
   "manifest_version": 2
 }
