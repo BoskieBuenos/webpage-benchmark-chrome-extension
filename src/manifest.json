@@ -2,6 +2,12 @@
   "name": "Webpage Benchmark Extension",
   "version": "0.0.0",
   "description": "Extension for live websites benchmarking.",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["display-panel/display-panel.js"]
+    }
+  ],
   "background": {
     "scripts": [
       "background.js"
