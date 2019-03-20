@@ -5,7 +5,9 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["display-panel/display-panel.js"]
+      "js": ["display-panel/display-panel.js"],
+      "html": ["display-panel/display-panel.html"],
+      "css": ["display-panel/display-panel.css"]
     }
   ],
   "background": {
