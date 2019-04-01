@@ -5,10 +5,19 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["display-panel/display-panel.js"],
+      "js": [
+        "module.js"
+//        "display-panel/display-panel.js",
+//        "benchmarks/benchmarks.js",
+//        "benchmarks/link-count/link-count.js",
+//        "benchmarks/test/test.js"
+      ],
       "html": ["display-panel/display-panel.html"],
       "css": ["display-panel/display-panel.css"]
     }
+  ],
+  "web_accessible_resources": [
+    "**/*.js"
   ],
   "background": {
     "scripts": [

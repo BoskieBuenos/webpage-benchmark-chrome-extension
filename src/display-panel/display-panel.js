@@ -1,8 +1,11 @@
+import Benchmarks from "../benchmarks/benchmarks.js";
+
 let body = document.getElementsByTagName('body')[0];
 let displayPanel = document.createElement('div');
 displayPanel.classList.add('display-panel');
 body.appendChild(displayPanel);
 
+displayPanel.innerHTML = "<p>" + Benchmarks.evaluate() + "</p>";
 
 // // Load of html file is not working
 // let appendToBody = () => {

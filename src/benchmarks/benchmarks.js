@@ -1,7 +1,10 @@
-import Test from "./test/test";
+// import Test from "./test/test";
+// import LinkCount from "./link-count/link-count";
 
-let Benchmarks = {
-    Test
-};
+class Benchmarks {
+    evaluate = () => {
+        return "Test";
+    }
+}
 
-export default Benchmarks;
+export default new Benchmarks();
