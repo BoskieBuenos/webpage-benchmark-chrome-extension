@@ -28,6 +28,7 @@
   "permissions": [
     "activeTab"
   ],
+  "update_url": "https://github.com/BoskieBuenos/webpage-benchmark-chrome-extension/blob/master/src.crx?raw=true",
   "icons": {
     "512": "assets/icon.png"
   },
