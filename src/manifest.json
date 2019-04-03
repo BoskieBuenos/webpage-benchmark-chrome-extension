@@ -1,16 +1,12 @@
 {
   "name": "Webpage Benchmark Extension",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Extension for live websites benchmarking.",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": [
         "module.js"
-//        "display-panel/display-panel.js",
-//        "benchmarks/benchmarks.js",
-//        "benchmarks/link-count/link-count.js",
-//        "benchmarks/test/test.js"
       ],
       "html": ["display-panel/display-panel.html"],
       "css": ["display-panel/display-panel.css"]
@@ -28,7 +24,6 @@
   "permissions": [
     "activeTab"
   ],
-  "update_url": "https://github.com/BoskieBuenos/webpage-benchmark-chrome-extension/blob/master/src.crx?raw=true",
   "icons": {
     "512": "assets/icon.png"
   },
