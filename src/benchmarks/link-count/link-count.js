@@ -1,12 +1,21 @@
-import { isVisible } from '../filters.js';
+import { isVisible, distinct } from '../filters.js';
 
 class LinkCount {
     getLabel = () => {
-        return "Link count";
+        return "Interactive elements";
     };
 
     execute = () => {
-        return [...document.getElementsByTagName("A")].filter(isVisible).length;
+        let links = [...document.getElementsByTagName('a')].filter(isVisible);
+        let buttons = [...document.getElementsByTagName('button')].filter(isVisible);
+        let iteractiveElements = [...document.getElementsByTagName('*')].filter(e => {
+            return e.hasAttribute('onclick') ||
+            e.hasAttribute('onmousedown') ||
+            e.hasAttribute('onmouseup') ||
+            e.hasAttribute('ondblclick')
+        }).filter(isVisible);
+        let benchmarkValue = links.concat(buttons).concat(iteractiveElements).filter(distinct).length;
+        return `${benchmarkValue} (${links.length} links / ${buttons.length} buttons / ${iteractiveElements.length} interactives)`
     };
 }
 
