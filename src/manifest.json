@@ -1,7 +1,7 @@
 {
   "name": "Webpage Benchmark Extension",
   "short_name": "WeBEx",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Extension for live websites benchmarking.",
   "content_scripts": [
     {
