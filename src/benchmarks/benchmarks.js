@@ -1,9 +1,11 @@
 // import Test from "./test/test";
 import LinkCount from "./link-count/link-count.js";
+import H1 from "./h1/h1.js";
 
 class Benchmarks {
     benchmarks = [
-        LinkCount
+        LinkCount,
+        H1
     ];
 
     evaluate = () => {
