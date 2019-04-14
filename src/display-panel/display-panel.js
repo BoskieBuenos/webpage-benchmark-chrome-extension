@@ -3,9 +3,15 @@ import Benchmarks from "../benchmarks/benchmarks.js";
 let body = document.getElementsByTagName('body')[0];
 let displayPanel = document.createElement('div');
 displayPanel.classList.add('display-panel');
+let displayPanelHeading = document.createElement('p');
+displayPanelHeading.innerHTML = 'Benchmarks:';
+displayPanel.appendChild(displayPanelHeading);
 body.appendChild(displayPanel);
 
-displayPanel.innerHTML = "<p>" + Benchmarks.evaluate() + "</p>";
+let evals = Benchmarks.evaluate();
+evals.forEach((p) => {
+    displayPanel.appendChild(p)
+});
 
 // // Load of html file is not working
 // let appendToBody = () => {
