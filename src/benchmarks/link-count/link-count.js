@@ -1,10 +1,12 @@
+import { isVisible } from '../filters.js';
+
 class LinkCount {
     getLabel = () => {
         return "Link count";
     };
 
     execute = () => {
-        return document.getElementsByTagName("A").length;
+        return [...document.getElementsByTagName("A")].filter(isVisible).length;
     };
 }
 
