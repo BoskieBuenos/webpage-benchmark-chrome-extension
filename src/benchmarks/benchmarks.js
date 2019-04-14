@@ -8,7 +8,6 @@ class Benchmarks {
 
     evaluate = () => {
         let result = this.benchmarks.map((benchmark) => {
-            console.log(benchmark.getLabel(), benchmark.execute());
             return this.p(`${benchmark.getLabel()}: ${benchmark.execute()}`);
         }) || [];
         return result;

@@ -3,15 +3,25 @@ import Benchmarks from "../benchmarks/benchmarks.js";
 let body = document.getElementsByTagName('body')[0];
 let displayPanel = document.createElement('div');
 displayPanel.classList.add('display-panel');
-let displayPanelHeading = document.createElement('p');
-displayPanelHeading.innerHTML = 'Benchmarks:';
-displayPanel.appendChild(displayPanelHeading);
 body.appendChild(displayPanel);
 
-let evals = Benchmarks.evaluate();
-evals.forEach((p) => {
-    displayPanel.appendChild(p)
-});
+let refreshBenchmarks = (mutationsList, observer) => {
+    if (mutationsList.some(({ target }) => target !== displayPanel)) {
+        while (displayPanel.firstChild) {
+            displayPanel.removeChild(displayPanel.firstChild);
+        }
+
+        let displayPanelHeading = document.createElement('p');
+        displayPanelHeading.innerHTML = 'Benchmarks:';
+        displayPanel.appendChild(displayPanelHeading);
+
+        let evals = Benchmarks.evaluate();
+        evals.forEach(p => displayPanel.appendChild(p));
+    }
+};
+
+let bodyModificationObserver = new MutationObserver(refreshBenchmarks);
+bodyModificationObserver.observe(body, { childList: true, attributes: true, subtree: true, characterData: true });
 
 // // Load of html file is not working
 // let appendToBody = () => {
