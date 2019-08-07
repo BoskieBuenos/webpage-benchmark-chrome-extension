@@ -1,10 +1,12 @@
 // import Test from "./test/test";
+import MultiLevelNavigation from "./1-multi-level-navigation/1-multi-level-navigation.js";
 import LinkCount from "./link-count/link-count.js";
 import H1 from "./h1/h1.js";
 import AmbiguousLetterAbbreviation from "./ambiguous-letter-abbreviation/ambiguous-letter-abbreviation.js";
 
 class Benchmarks {
     benchmarks = [
+        MultiLevelNavigation,
         LinkCount,
         H1,
         AmbiguousLetterAbbreviation

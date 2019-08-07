@@ -13,11 +13,11 @@ class AmbiguousLetterAbbreviation {
             this.checkChildrenTextNodes(node, acronyms);
         });
         return acronyms.filter(distinct).join(', ');
-    }
+    };
 
     getAbbreviations = (text = '') => {
         return text.match(/\b(?:[a-z]*[A-Z][a-z]*){2,}/g) || [];
-    }
+    };
 
     checkChildrenTextNodes = (node, hits) => {
         [...node.childNodes].filter(isVisible).forEach((child) => {
