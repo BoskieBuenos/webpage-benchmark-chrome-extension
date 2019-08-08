@@ -9,7 +9,7 @@ class MultiLevelNavigation {
     execute = () => {
         let maxDepth = getNavigationDepths().reduce((maxDepthCont, contDepth) =>
             contDepth.depth > maxDepthCont.depth ? contDepth : maxDepthCont
-        );
+        , {});
 
         return `Max depth is ${maxDepth.depth}`;
     };
