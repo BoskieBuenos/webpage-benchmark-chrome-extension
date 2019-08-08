@@ -1,4 +1,5 @@
 import {isVisible} from "../filters.js";
+import getFormsComplexities from "../../metrics/2-complex-form/complex-forms.js";
 
 class ComplexRegularForm {
     getLabel = () => {
@@ -7,11 +8,7 @@ class ComplexRegularForm {
 
     // TODO exclude sign on forms
     execute = () => {
-        let forms = [...document.getElementsByTagName('form')].filter(isVisible);
-        let formsStats = forms.map(form => { return {
-            node: form,
-            elements: form.elements.length
-        }});
+        let formsStats = getFormsComplexities();
         let maxInputsNumber = Math.max(...formsStats.map(s => s.elements));
         return `Max inputs ${maxInputsNumber}`
     }

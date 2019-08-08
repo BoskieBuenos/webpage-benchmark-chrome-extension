@@ -11,7 +11,6 @@ class MultiLevelNavigation {
             contDepth.depth > maxDepthCont.depth ? contDepth : maxDepthCont
         );
 
-        // return `Max depth is ${Math.max(...getNavigationDepths().map(t => t.depth))}`;
         return `Max depth is ${maxDepth.depth}`;
     };
 }

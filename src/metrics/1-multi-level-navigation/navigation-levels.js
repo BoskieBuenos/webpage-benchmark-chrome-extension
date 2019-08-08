@@ -1,6 +1,3 @@
-///
-/// Input document
-///
 import {isVisible} from "../../benchmarks/filters.js"; // TODO This module shouldn't depend on it
 
 export default () => {
