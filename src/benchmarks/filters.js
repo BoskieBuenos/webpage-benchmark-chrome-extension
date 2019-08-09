@@ -19,3 +19,10 @@ export function HTMLNodesOfType(type) {
         return element.nodeType === type;
     }
 }
+
+export function attributeContains(attr, value) {
+    return (element) => {
+        let attribute = element.getAttribute(attr);
+        return attribute && attribute.indexOf(value) > -1
+    }
+}
