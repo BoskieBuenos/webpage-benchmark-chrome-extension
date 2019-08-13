@@ -21,6 +21,7 @@ let refreshBenchmarks = (mutationsList, observer) => {
 };
 
 let bodyModificationObserver = new MutationObserver(refreshBenchmarks);
+refreshBenchmarks([{target: body}]); // init is required for static pages
 bodyModificationObserver.observe(body, { childList: true, attributes: true, subtree: true, characterData: true });
 
 // // Load of html file is not working

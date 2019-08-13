@@ -23,7 +23,7 @@ class TooLittleGoingOn {
         // Does the site have the title
         let title = document.getElementsByTagName('title');
         let hasTitle = !!title && title.length > 0;
-        return `Title ${hasTitle ? 'TAK' : 'BRAK'} / Logo ${hasLogo ? 'TAK' : 'BRAK'} / Icon ${hasIcon ? 'TAK' : 'BRAK'}`;
+        return `Title ${hasTitle ? 'YES' : 'MISSING'} / Logo ${hasLogo ? 'YES' : 'MISSING'} / Icon ${hasIcon ? 'YES' : 'MISSING'}`;
     }
 }
 

@@ -3,10 +3,7 @@
 ///
 
 import {isVisible, distinct} from "../filters.js";
-
-function css(element, property) {
-    return window.getComputedStyle(element, null).getPropertyValue(property);
-}
+import {css} from "../../utils/dom-utils.js";
 
 class InconsistentDesign {
     getLabel = () => {
