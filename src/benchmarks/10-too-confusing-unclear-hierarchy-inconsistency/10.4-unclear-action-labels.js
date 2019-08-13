@@ -2,13 +2,20 @@
 /// Confusing links labels - Click here, Ok, Cancel, etc.
 ///
 
+import {isVisible} from "../filters.js";
+
+const MEANINGLESS_ACTION_LABELS = ['click here', 'ok', 'cancel']; // TODO Find better examples
+
 class UnclearActionLabels {
     getLabel = () => {
         return "10.4 Confusing links labels";
     };
 
     execute = () => {
-        return "NOT IMPLEMENTED";
+        let links = [...document.getElementsByTagName('a')].filter(isVisible);
+        let buttons = [...document.getElementsByTagName('button')].filter(isVisible);
+        let meaninglessActions = links.concat(buttons).filter(e => MEANINGLESS_ACTION_LABELS.indexOf(e.innerHTML.toLowerCase()) > -1);
+        return `${meaninglessActions.length > 0 ? meaninglessActions.map(e => e.innerHTML).join(", ") : 'NOT FOUND'}`;
     }
 }
 
