@@ -4,6 +4,7 @@ class LowAccessibility {
     };
 
     execute = () => {
+        // https://www.npmjs.com/package/wcag-validator
         return "NOT IMPLEMENTED";
     }
 }
