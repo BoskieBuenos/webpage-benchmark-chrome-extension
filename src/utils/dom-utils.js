@@ -77,7 +77,9 @@ export function parseColor(color) {
     }
     if (color.indexOf('rgb') === -1) {
         // convert named colors
-        let tempElem = document.body.appendChild(document.createElement('fictum')); // intentionally use unknown tag to lower chances of css rule override with !important
+        let tempElem = document.createElement('fictum');
+        tempElem.style.display = 'none';
+        document.body.appendChild(tempElem); // intentionally use unknown tag to lower chances of css rule override with !important
         let flag = 'rgb(1, 2, 3)'; // this flag tested on chrome 59, ff 53, ie9, ie10, ie11, edge 14
         tempElem.style.color = flag;
         if (tempElem.style.color !== flag)
@@ -95,4 +97,14 @@ export function parseColor(color) {
             return +a
         });
     }
+}
+
+export function toPx(measure) {
+    let tempElem = document.createElement('fictum');
+    tempElem.style.display = 'none';
+    document.body.appendChild(tempElem); // intentionally use unknown tag to lower chances of css rule override with !important
+    tempElem.style.width = measure;
+    let ppi = css(tempElem, 'width');
+    document.body.removeChild(tempElem);
+    return ppi;
 }
