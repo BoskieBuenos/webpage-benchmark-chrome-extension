@@ -1,10 +1,16 @@
+// https://medium.com/@KentGruber/build-your-own-ad-blocker-90230436e364
+
+import {attributeContains} from "../filters.js";
+
 class AdsInAllTheWrongPlaces {
     getLabel = () => {
         return "14 Ads in All the Wrong Places";
     };
 
     execute = () => {
-        return "NOT IMPLEMENTED";
+        // Naively find <iframe> elements with with src containing phrase 'doubleclick.net'
+        let ads = [...document.getElementsByTagName('iframe')].filter(attributeContains('src', 'doubleclick.net'));
+        return `ads ${ads.length}`;
     }
 }
 

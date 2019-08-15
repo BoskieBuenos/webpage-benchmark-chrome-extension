@@ -25,17 +25,19 @@ export function HTMLNodesOfType(type) {
 export function attributeContains(attr, value) {
     return (element) => {
         let attribute = element.getAttribute(attr);
-        return attribute && attribute.indexOf(value) > -1
+        return attribute && isSubstring(value, attribute);
     }
 }
 
 export function containsText(fragment) {
-    return (element) => {
-        let searchedPattern = new RegExp(fragment, 'i');
-        return searchedPattern.test(element.innerText);
-    }
+    return (element) => isSubstring(fragment, element.innerText);
 }
 
 export function containsHeading(fragment) {
     return (rootElement) => getAllHeadings(rootElement).some(containsText(fragment));
+}
+
+function isSubstring(substring, ofString) {
+    let searchedPattern = new RegExp(substring, 'i');
+    return searchedPattern.test(ofString);
 }
