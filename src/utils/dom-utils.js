@@ -4,11 +4,16 @@ export function css(element, property) {
     return window.getComputedStyle(element, null).getPropertyValue(property);
 }
 
+export function getAllHeadings(rootElement = document, onlyVisible = true) {
+    let headings = [1, 2, 3, 4, 5, 6].reduce((acc, i) => acc.concat([...rootElement.getElementsByTagName(`h${i}`)]), []);
+    return onlyVisible ? headings.filter(isVisible) : headings;
+}
+
 export function getButtonsWithContrast() {
     let buttons = [...document.getElementsByTagName('button')].filter(isVisible);
     return buttons.map(button => {
         let backgroundColor = getBackgroundColor(button);
-        let buttonColor = parseColor(css(button,'background-color'));
+        let buttonColor = parseColor(css(button, 'background-color'));
         let withBackgroundContrast = buttonColor[3] !== 0 ? contrast(buttonColor, backgroundColor) : 1; // TODO handle semi-transparent background
         return {button, backgroundColor, contrast: withBackgroundContrast}
     });
@@ -43,9 +48,9 @@ export function getBackgroundColor(element) {
     while (parent) {
         parentCssColor = css(parent, 'background-color');
         parentColor = parseColor(parentCssColor);
-        accColor[0] = accColor[0] * (1-opacity) + parentColor[0] * opacity;
-        accColor[1] = accColor[1] * (1-opacity) + parentColor[1] * opacity;
-        accColor[2] = accColor[2] * (1-opacity) + parentColor[2] * opacity;
+        accColor[0] = accColor[0] * (1 - opacity) + parentColor[0] * opacity;
+        accColor[1] = accColor[1] * (1 - opacity) + parentColor[1] * opacity;
+        accColor[2] = accColor[2] * (1 - opacity) + parentColor[2] * opacity;
         parentOpacity = parentColor[3];
         opacity = opacity * (1 - parentOpacity);
 

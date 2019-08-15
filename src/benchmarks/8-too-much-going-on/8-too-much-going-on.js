@@ -1,4 +1,4 @@
-import {isVisible} from "../filters.js";
+import {getAllHeadings} from "../../utils/dom-utils.js";
 
 class TooMuchGoingOn {
     getLabel = () => {
@@ -7,7 +7,7 @@ class TooMuchGoingOn {
 
     execute = () => {
         // Count headings
-        let headings = [1,2,3,4,5,6].reduce((acc, i) => acc.concat([...document.getElementsByTagName(`h${i}`)]), []).filter(isVisible);
+        let headings = getAllHeadings();
         // TODO Amount of content?
         // TODO Clutternes?
         // TODO Small margins between components?
