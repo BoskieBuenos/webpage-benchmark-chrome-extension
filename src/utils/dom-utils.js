@@ -14,7 +14,7 @@ export function getButtonsWithContrast() {
     return buttons.map(button => {
         let backgroundColor = getBackgroundColor(button);
         let buttonColor = parseColor(css(button, 'background-color'));
-        let withBackgroundContrast = buttonColor[3] !== 0 ? contrast(buttonColor, backgroundColor) : 1; // TODO handle semi-transparent background
+        let withBackgroundContrast = contrast(buttonColor, backgroundColor);
         return {button, backgroundColor, contrast: withBackgroundContrast}
     });
 }
@@ -28,11 +28,21 @@ export function luminanace(r, g, b) {
     return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
 }
 
+function contrastRgba(rgba1, rgba2) {
+    return rgba1[3] !== 0 || rgba2[3] !== 0 ? contrastRgb(rgba1, rgba2) : 1; // TODO handle semi-transparent background
+}
+
 // Source: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
-export function contrast(rgb1, rgb2) {
+function contrastRgb(rgb1, rgb2) {
     let l1 = luminanace(rgb1[0], rgb1[1], rgb1[2]) + 0.05;
     let l2 = luminanace(rgb2[0], rgb2[1], rgb2[2]) + 0.05;
     return Math.max(l1, l2) / Math.min(l1, l2);
+}
+
+export function contrast(color1, color2) {
+    color1[3] |= 1;
+    color2[3] |= 1;
+    return contrastRgba(color1, color2);
 }
 
 export function getBackgroundColor(element) {

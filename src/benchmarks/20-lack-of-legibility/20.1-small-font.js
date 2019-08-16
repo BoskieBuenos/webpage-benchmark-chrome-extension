@@ -1,4 +1,5 @@
 import {css} from "../../utils/dom-utils.js";
+import {isVisible, notDisplayPanel} from "../filters.js";
 
 const fontSizeThreshold = 100; // TODO select sensible value
 
@@ -9,7 +10,7 @@ class SmallFont {
 
     execute = () => {
         // Get all elements with fonts below the threshold
-        let tooSmallElements = [...document.getElementsByTagName('*')].map(e => {
+        let tooSmallElements = [...document.getElementsByTagName('*')].filter(notDisplayPanel).filter(isVisible).map(e => {
             return {
                 element: e,
                 fontSize: parseFloat(css(e, 'font-size'))

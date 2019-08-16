@@ -20,9 +20,10 @@ export function notNull(element) {
 
 export function HTMLNodesOfType(type) {
     return (element) => {
-        for (let i = 0; i < element.childNodes.length; ++i)
-            if (element.childNodes[i].nodeType === type)
-                console.log(element.childNodes[i].textContent);
+        // TODO The loop isn't doing anything
+        // for (let i = 0; i < element.childNodes.length; ++i)
+        //     if (element.childNodes[i].nodeType === type)
+        //         console.log(element.childNodes[i].textContent);
         return element.nodeType === type;
     }
 }
