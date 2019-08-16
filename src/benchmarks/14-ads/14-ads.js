@@ -1,6 +1,6 @@
 // https://medium.com/@KentGruber/build-your-own-ad-blocker-90230436e364
 
-import {attributeContains} from "../filters.js";
+import {notDisplayPanel, attributeContains} from "../filters.js";
 
 class AdsInAllTheWrongPlaces {
     getLabel = () => {
@@ -9,7 +9,7 @@ class AdsInAllTheWrongPlaces {
 
     execute = () => {
         // Naively find <iframe> elements with with src containing phrase 'doubleclick.net'
-        let ads = [...document.getElementsByTagName('iframe')].filter(attributeContains('src', 'doubleclick.net'));
+        let ads = [...document.getElementsByTagName('iframe')].filter(attributeContains('src', 'doubleclick.net')).filter(notDisplayPanel);
         return `ads ${ads.length}`;
     }
 }

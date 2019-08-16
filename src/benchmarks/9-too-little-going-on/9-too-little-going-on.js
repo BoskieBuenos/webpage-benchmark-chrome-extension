@@ -1,4 +1,4 @@
-import {isVisible, attributeContains} from '../filters.js';
+import {notDisplayPanel, isVisible, attributeContains} from '../filters.js';
 
 class TooLittleGoingOn {
     getLabel = () => {
@@ -8,7 +8,7 @@ class TooLittleGoingOn {
     execute = () => {
         // Does the site have an icon
         // 1. Check <link rel='icon'>
-        let icon = [...document.getElementsByTagName('link')].filter(t => t.getAttribute('rel') === 'icon');
+        let icon = [...document.getElementsByTagName('link')].filter(t => t.getAttribute('rel') === 'icon').filter(notDisplayPanel);
         // TODO 2. Make GET on '/favicon.ico'
         // if (icon.length === 0) {
         //     icon = fetch('/favicon.ico');
@@ -16,9 +16,9 @@ class TooLittleGoingOn {
         let hasIcon = !!icon;
         // Does the site have a logo
         // TODO Better rules for github.com
-        let logoClass = [...document.querySelectorAll(`[class*='logo']`)].filter(isVisible);
-        let logoImg = [...document.getElementsByTagName('img')].filter(attributeContains('src', 'logo')).filter(isVisible);
-        let logoA = [...document.getElementsByTagName('a')].filter(attributeContains('href', 'logo')).filter(isVisible);
+        let logoClass = [...document.querySelectorAll(`[class*='logo']`)].filter(notDisplayPanel).filter(isVisible);
+        let logoImg = [...document.getElementsByTagName('img')].filter(attributeContains('src', 'logo')).filter(notDisplayPanel).filter(isVisible);
+        let logoA = [...document.getElementsByTagName('a')].filter(attributeContains('href', 'logo')).filter(notDisplayPanel).filter(isVisible);
         let hasLogo = logoClass.length > 0 || logoImg.length > 0 || logoA.length > 0;
         // Does the site have the title
         let title = document.getElementsByTagName('title');

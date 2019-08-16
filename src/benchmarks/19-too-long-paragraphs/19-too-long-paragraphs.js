@@ -1,4 +1,4 @@
-import {isVisible} from "../filters.js";
+import {notDisplayPanel, isVisible} from "../filters.js";
 
 class TooLongParagraphs {
     getLabel = () => {
@@ -6,12 +6,12 @@ class TooLongParagraphs {
     };
 
     execute = () => {
-        let paragraphs = [...document.getElementsByTagName('p')].filter(isVisible).map(p => { return {
+        let paragraphs = [...document.getElementsByTagName('p')].filter(notDisplayPanel).filter(isVisible).map(p => { return {
             element: p,
             words: p.innerText.split(' ').length
         }});
 
-        return `lengths ${paragraphs.map(p => p.words).join()}`;
+        return `words ${paragraphs.map(p => p.words).join()}`;
     }
 }
 

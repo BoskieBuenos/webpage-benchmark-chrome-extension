@@ -2,7 +2,7 @@
 /// Similar links leading to different places
 ///
 
-import {isVisible, distinct} from "../filters.js";
+import {notDisplayPanel, isVisible, distinct} from "../filters.js";
 
 class ConfusingLinks {
     getLabel = () => {
@@ -12,7 +12,7 @@ class ConfusingLinks {
     execute = () => {
         // Group links by similarity & verify their destinations
         // TODO make fuzzy string comparison - for now exacts
-        let links = [...document.getElementsByTagName('a')].filter(isVisible);
+        let links = [...document.getElementsByTagName('a')].filter(notDisplayPanel).filter(isVisible);
         let similarLabels = links.reduce((acc, link) => {
             acc[link.innerText] = (acc[link.innerText] || []).concat(link);
             return acc;

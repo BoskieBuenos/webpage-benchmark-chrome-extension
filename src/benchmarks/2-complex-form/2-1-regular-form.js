@@ -1,4 +1,4 @@
-import {isVisible} from "../filters.js";
+import {notDisplayPanel, isVisible} from "../filters.js";
 import getFormsComplexities from "../../metrics/2-complex-form/complex-forms.js";
 
 class ComplexRegularForm {
@@ -8,7 +8,7 @@ class ComplexRegularForm {
 
     // TODO exclude sign on forms
     execute = () => {
-        let formsStats = getFormsComplexities();
+        let formsStats = getFormsComplexities().filter(f => notDisplayPanel(f.node));
         let maxInputsNumber = Math.max(...formsStats.map(s => s.elements));
         return `Max inputs ${maxInputsNumber}`
     }

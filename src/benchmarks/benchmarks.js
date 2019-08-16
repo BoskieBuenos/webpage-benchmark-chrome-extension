@@ -75,6 +75,7 @@ class Benchmarks {
 
     p = (text) => {
         let elem = document.createElement('p');
+        elem.classList.add('wbce-benchmark');
         elem.innerHTML = text;
         return elem;
     };

@@ -2,7 +2,7 @@ import Benchmarks from "../benchmarks/benchmarks.js";
 
 let body = document.getElementsByTagName('body')[0];
 let displayPanel = document.createElement('div');
-displayPanel.classList.add('display-panel');
+displayPanel.classList.add('wbce-display-panel');
 body.appendChild(displayPanel);
 
 let refreshBenchmarks = (mutationsList, observer) => {
@@ -12,6 +12,7 @@ let refreshBenchmarks = (mutationsList, observer) => {
         }
 
         let displayPanelHeading = document.createElement('p');
+        displayPanelHeading.classList.add('wbce-benchmark');
         displayPanelHeading.innerHTML = 'Benchmarks:';
         displayPanel.appendChild(displayPanelHeading);
 

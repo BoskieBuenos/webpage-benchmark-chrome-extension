@@ -7,7 +7,7 @@ class AmbiguousLetterAbbreviation {
 
     execute = () => {
         let acronyms = [];
-        let bodyChildren = [...document.body.childNodes].filter((e) => e.nodeType !== Node.ELEMENT_NODE || (e.className.match && !e.className.match(/\bdisplay-panel\b/)))
+        let bodyChildren = [...document.body.childNodes].filter((e) => e.nodeType !== Node.ELEMENT_NODE || (e.className.match && !e.className.match(/\bwbce\b/)))
         .filter(isVisible)
         .forEach((node) => {
             this.checkChildrenTextNodes(node, acronyms);

@@ -1,4 +1,4 @@
-import {isVisible} from "../filters.js";
+import {notDisplayPanel, isVisible} from "../filters.js";
 import getNavigationDepths from "../../metrics/1-multi-level-navigation/navigation-levels.js";
 
 class MultiLevelNavigation {
@@ -7,7 +7,7 @@ class MultiLevelNavigation {
     };
 
     execute = () => {
-        let maxDepth = getNavigationDepths().reduce((maxDepthCont, contDepth) =>
+        let maxDepth = getNavigationDepths().filter(n => notDisplayPanel(n.navContainer)).reduce((maxDepthCont, contDepth) =>
             contDepth.depth > maxDepthCont.depth ? contDepth : maxDepthCont
         , {});
 

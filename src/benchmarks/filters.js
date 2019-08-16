@@ -1,5 +1,10 @@
 import {getAllHeadings} from "../utils/dom-utils.js";
 
+export function notDisplayPanel(node) {
+    // We assume here that every element of the extension has class prefixed with 'wbce'
+    return !/\bwbce-/.test(node.className);
+}
+
 export function isVisible(node) {
     let visibleAsElement = node.nodeType !== Node.ELEMENT_NODE || window.getComputedStyle(node).display !== 'none';
     return (visibleAsElement && node.offsetParent !== null);

@@ -1,4 +1,5 @@
 import {getAllHeadings} from "../../utils/dom-utils.js";
+import {notDisplayPanel} from "../filters.js";
 
 class TooMuchGoingOn {
     getLabel = () => {
@@ -7,7 +8,7 @@ class TooMuchGoingOn {
 
     execute = () => {
         // Count headings
-        let headings = getAllHeadings();
+        let headings = getAllHeadings().filter(notDisplayPanel);
         // TODO Amount of content?
         // TODO Clutternes?
         // TODO Small margins between components?

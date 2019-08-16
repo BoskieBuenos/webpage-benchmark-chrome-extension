@@ -2,7 +2,7 @@
 /// Bad composition - not visible hierarchy presentation
 ///
 
-import {isVisible} from "../filters.js";
+import {notDisplayPanel, isVisible} from "../filters.js";
 import {css} from "../../utils/dom-utils.js";
 
 const MIN_DIFFERENCE = 4; //px // TODO specify in %
@@ -26,12 +26,12 @@ class BadComposition {
     execute = () => {
         // TODO Detect wrong positioning and paddings of headings
         // Check sizes of same typeface headings and different importance
-        let h1 = [...document.getElementsByTagName(`h1`)].filter(isVisible);
-        let h2 = [...document.getElementsByTagName(`h2`)].filter(isVisible);
-        let h3 = [...document.getElementsByTagName(`h3`)].filter(isVisible);
-        let h4 = [...document.getElementsByTagName(`h4`)].filter(isVisible);
-        let h5 = [...document.getElementsByTagName(`h5`)].filter(isVisible);
-        let h6 = [...document.getElementsByTagName(`h6`)].filter(isVisible);
+        let h1 = [...document.getElementsByTagName(`h1`)].filter(notDisplayPanel).filter(isVisible);
+        let h2 = [...document.getElementsByTagName(`h2`)].filter(notDisplayPanel).filter(isVisible);
+        let h3 = [...document.getElementsByTagName(`h3`)].filter(notDisplayPanel).filter(isVisible);
+        let h4 = [...document.getElementsByTagName(`h4`)].filter(notDisplayPanel).filter(isVisible);
+        let h5 = [...document.getElementsByTagName(`h5`)].filter(notDisplayPanel).filter(isVisible);
+        let h6 = [...document.getElementsByTagName(`h6`)].filter(notDisplayPanel).filter(isVisible);
         let inconsistentHeadings = sizeDiff(h2, h1).filter(d => d.diff <= MIN_DIFFERENCE);
         inconsistentHeadings.concat(sizeDiff(h3, [...h1, ...h2]).filter(d => d.diff <= MIN_DIFFERENCE));
         inconsistentHeadings.concat(sizeDiff(h4, [...h1, ...h2, ...h3]).filter(d => d.diff <= MIN_DIFFERENCE));
