@@ -1,5 +1,13 @@
 import {isVisible} from "../benchmarks/filters.js";
 
+export function getFirstParentElement(node) {
+    if (node.parentElement === null || node.parentElement.nodeType === Node.ELEMENT_NODE) {
+        return node.parentElement;
+    } else {
+        return getFirstParentElement(node.parentElement);
+    }
+}
+
 export function css(element, property) {
     return window.getComputedStyle(element, null).getPropertyValue(property);
 }
@@ -7,6 +15,24 @@ export function css(element, property) {
 export function getAllHeadings(rootElement = document, onlyVisible = true) {
     let headings = [1, 2, 3, 4, 5, 6].reduce((acc, i) => acc.concat([...rootElement.getElementsByTagName(`h${i}`)]), []);
     return onlyVisible ? headings.filter(isVisible) : headings;
+}
+
+export function getAllTextNodes() {
+    let textNodes = [], n;
+    let treeWalker = document.createTreeWalker(document.body, NodeFilter.TEXT_NODE,
+        {
+            acceptNode: (node) => {
+                if (!isVisible(node)) {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                let isNotEmptyTextNode = node.nodeType === Node.TEXT_NODE && node.textContent.trim().length;
+                return isNotEmptyTextNode ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+            }
+        }, false);
+    while (n = treeWalker.nextNode()) {
+        textNodes.push(n);
+    }
+    return textNodes
 }
 
 export function getButtonsWithContrast() {

@@ -1,4 +1,4 @@
-import {getAllHeadings} from "../utils/dom-utils.js";
+import {getAllHeadings, getFirstParentElement} from "../utils/dom-utils.js";
 
 export function notDisplayPanel(node) {
     // We assume here that every element of the extension has class prefixed with 'wbce'
@@ -6,8 +6,16 @@ export function notDisplayPanel(node) {
 }
 
 export function isVisible(node) {
-    let visibleAsElement = node.nodeType !== Node.ELEMENT_NODE || window.getComputedStyle(node).display !== 'none';
-    return (visibleAsElement && node.offsetParent !== null);
+    if (node.nodeType !== Node.ELEMENT_NODE) {
+        node = getFirstParentElement(node);
+    }
+    // Now null or Element
+    if (node === null) {
+        return true;
+    }
+    let visibleAsElement = window.getComputedStyle(node).display !== 'none';
+    let isParentVisible = node.offsetParent !== null;
+    return visibleAsElement && isParentVisible;
 }
 
 export function distinct(element, index, self) {
