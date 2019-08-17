@@ -12,7 +12,7 @@ class LowBackgroundFontContrast {
         // Get all text nodes and calculate its contrast with background
         let textNodes = getAllTextNodes().filter(n => notDisplayPanel(n.parentElement));
 
-        let notContrastingTexts = textNodes.map(element => {
+        let notContrastingTexts = textNodes.map(element => { // FIXME element is not an Element
             let textColor = parseColor(css(element.parentElement, 'color'));
             let backgroundColor = getBackgroundColor(element);
             return {element, backgroundColor, contrast: contrast(textColor, backgroundColor)}

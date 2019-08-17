@@ -1,4 +1,7 @@
 import Benchmarks from "../benchmarks/benchmarks.js";
+import {notDisplayPanel} from "../benchmarks/filters.js";
+
+let lastRefresh = 0;
 
 let body = document.getElementsByTagName('body')[0];
 let displayPanel = document.createElement('div');
@@ -6,7 +9,10 @@ displayPanel.classList.add('wbce-display-panel');
 body.appendChild(displayPanel);
 
 let refreshBenchmarks = (mutationsList, observer) => {
-    if (mutationsList.some(({ target }) => target !== displayPanel)) {
+    let isNotExtensionChanged = mutationsList.filter(({ target }) => notDisplayPanel(target)).length > 0;
+    let timespan = Date.now() - lastRefresh;
+    if (isNotExtensionChanged && timespan > 100) {
+        lastRefresh = Date.now();
         while (displayPanel.firstChild) {
             displayPanel.removeChild(displayPanel.firstChild);
         }
@@ -24,16 +30,3 @@ let refreshBenchmarks = (mutationsList, observer) => {
 let bodyModificationObserver = new MutationObserver(refreshBenchmarks);
 refreshBenchmarks([{target: body}]); // init is required for static pages
 bodyModificationObserver.observe(body, { childList: true, attributes: true, subtree: true, characterData: true });
-
-// // Load of html file is not working
-// let appendToBody = () => {
-//     if (xhr.status !== 200) return;
-//     let body = document.getElementsByTagName('body')[0];
-//     body.appendChild(xhr.responseText);
-// };
-//
-// let xhr = new XMLHttpRequest();
-// let url = chrome.extension.getURL('display-panel/display-panel.html');
-// xhr.open('GET', url, true);
-// xhr.onreadystatechange = appendToBody;
-// xhr.send();

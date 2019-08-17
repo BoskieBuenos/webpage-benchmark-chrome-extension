@@ -1,10 +1,11 @@
-import {getAllHeadings, getFirstParentElement} from "../utils/dom-utils.js";
+import {css, getAllHeadings, getFirstParentElement} from "../utils/dom-utils.js";
 
 export function notDisplayPanel(node) {
     // We assume here that every element of the extension has class prefixed with 'wbce'
     return !/\bwbce-/.test(node.className);
 }
 
+// FIXME fails for fixed elements
 export function isVisible(node) {
     if (node.nodeType !== Node.ELEMENT_NODE) {
         node = getFirstParentElement(node);
@@ -13,9 +14,9 @@ export function isVisible(node) {
     if (node === null) {
         return true;
     }
-    let visibleAsElement = window.getComputedStyle(node).display !== 'none';
+    let visibleAsElement = css(node, 'display') !== 'none' && css(node, 'visibility') !== 'hidden';
     let isParentVisible = node.offsetParent !== null;
-    return visibleAsElement && isParentVisible;
+    return visibleAsElement && (isParentVisible || css(node, 'position') === 'fixed');
 }
 
 export function distinct(element, index, self) {
@@ -49,6 +50,13 @@ export function containsText(fragment) {
 
 export function containsHeading(fragment) {
     return (rootElement) => getAllHeadings(rootElement).some(containsText(fragment));
+}
+
+export function isTag(tagName) {
+    return (element) => {
+        let searchedPattern = new RegExp(tagName, 'i');
+        return searchedPattern.test(element.tagName);
+    }
 }
 
 function isSubstring(substring, ofString) {

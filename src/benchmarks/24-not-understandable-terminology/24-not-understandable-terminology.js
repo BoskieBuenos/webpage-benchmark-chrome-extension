@@ -8,6 +8,7 @@ class NotUnderstandableTerminology {
     };
 
     execute = () => {
+        // TODO Similar as AmbiguousLetterAbbreviation
         return "NOT IMPLEMENTED";
     }
 }

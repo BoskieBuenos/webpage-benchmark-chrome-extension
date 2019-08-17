@@ -1,6 +1,6 @@
 import {isVisible} from "../benchmarks/filters.js";
 
-export function getFirstParentElement(node) {
+export function getFirstParentElement(node = {parentElement: null}) {
     if (node.parentElement === null || node.parentElement.nodeType === Node.ELEMENT_NODE) {
         return node.parentElement;
     } else {
@@ -38,7 +38,7 @@ export function getAllTextNodes() {
 export function getButtonsWithContrast() {
     let buttons = [...document.getElementsByTagName('button')].filter(isVisible);
     return buttons.map(button => {
-        let backgroundColor = getBackgroundColor(button);
+        let backgroundColor = getBackgroundColor(button.parentElement);
         let buttonColor = parseColor(css(button, 'background-color'));
         let withBackgroundContrast = contrast(buttonColor, backgroundColor);
         return {button, backgroundColor, contrast: withBackgroundContrast}
@@ -72,29 +72,35 @@ export function contrast(color1, color2) {
 }
 
 export function getBackgroundColor(element) {
-    let parent = element.parentElement;
-    let parentCssColor = css(parent, 'background-color');
-    let parentColor = parseColor(parentCssColor);
-    let parentOpacity = parentColor[3];
-    let opacity = 1 - parentOpacity;
-
-    let accColor = [parentColor[0], parentColor[1], parentColor[2]];
-    parent = parent.parentElement;
-
-    while (parent) {
-        parentCssColor = css(parent, 'background-color');
-        parentColor = parseColor(parentCssColor);
-        accColor[0] = accColor[0] * (1 - opacity) + parentColor[0] * opacity;
-        accColor[1] = accColor[1] * (1 - opacity) + parentColor[1] * opacity;
-        accColor[2] = accColor[2] * (1 - opacity) + parentColor[2] * opacity;
-        parentOpacity = parentColor[3];
-        opacity = opacity * (1 - parentOpacity);
-
-        if (parentOpacity === 1) {
-            return accColor;
-        }
-        parent = parent.parentElement;
+    if (element && element.nodeType !== Node.ELEMENT_NODE) {
+        element = getFirstParentElement(element);
     }
+    if (element === null) {
+        return null;
+    }
+    let elementColor = parseColor(css(element, 'background-color'));
+    let accColor = [
+        elementColor[0] * elementColor[3],
+        elementColor[1] * elementColor[3],
+        elementColor[2] * elementColor[3]
+    ];
+    let opacity = 1 - elementColor[3];
+    element = getFirstParentElement(element);
+
+    while (opacity > 0) {
+        if (element === null) { // even <html> is transparent
+            element = undefined;
+            elementColor = [255, 255, 255, 1]; // default browser background
+        } else {
+            elementColor = parseColor(css(element, 'background-color'));
+        }
+        accColor[0] += elementColor[0] * opacity;
+        accColor[1] += elementColor[1] * opacity;
+        accColor[2] += elementColor[2] * opacity;
+        opacity *= 1 - elementColor[3];
+        element = getFirstParentElement(element);
+    }
+    return accColor;
 }
 
 /// return array of [r,g,b,a] from any valid color. if failed returns undefined
