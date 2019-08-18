@@ -68,9 +68,9 @@ class Benchmarks {
         AmbiguousLetterAbbreviation // Same as NotUnderstandableTerminology
     ];
 
-    evaluate = () => {
+    evaluate = (performanceRegistry) => {
         let result = this.benchmarks.map((benchmark) => {
-            return this.p(`${benchmark.getLabel()}: ${benchmark.execute()}`);
+            return this.p(`${benchmark.getLabel()}: ${benchmark.execute({performanceRegistry})}`);
         }) || [];
         return result;
     };
