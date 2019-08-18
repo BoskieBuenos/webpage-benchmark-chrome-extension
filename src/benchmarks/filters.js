@@ -52,9 +52,9 @@ export function containsHeading(fragment) {
     return (rootElement) => getAllHeadings(rootElement).some(containsText(fragment));
 }
 
-export function isTag(tagName) {
+export function isTag(...tagNames) {
     return (element) => {
-        let searchedPattern = new RegExp(tagName, 'i');
+        let searchedPattern = new RegExp(tagNames.join('|'), 'i');
         return searchedPattern.test(element.tagName);
     }
 }
