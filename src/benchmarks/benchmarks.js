@@ -63,9 +63,9 @@ class Benchmarks {
         NewWindowLinks,
         LowAccessibility,
         RequiredFieldsNotIndicated,
-        LinkCount,
-        H1,
-        AmbiguousLetterAbbreviation // Same as NotUnderstandableTerminology
+        // LinkCount,
+        // H1,
+        // AmbiguousLetterAbbreviation // Same as NotUnderstandableTerminology
     ];
 
     evaluate = (performanceRegistry) => {
