@@ -11,8 +11,7 @@ class TooLittleGoingOn {
     execute = () => {
         // Does the site have an icon
         // 1. Check <link rel='icon'>
-        // let icon = [...document.getElementsByTagName('link')].filter(t => t.getAttribute('rel') === 'icon').filter(notDisplayPanel);
-        let icon = [];
+        let icon = [...document.getElementsByTagName('link')].filter(t => t.getAttribute('rel') === 'icon').filter(notDisplayPanel);
         // 2. Make GET on '/favicon.ico'
         if (icon.length === 0) {
             let promise = checkExistance(`${window.location.origin}/favicon.ico`);
