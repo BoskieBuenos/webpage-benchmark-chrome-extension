@@ -3,6 +3,7 @@
 ///
 
 import {notDisplayPanel, isVisible, distinct} from "../filters.js";
+import {hashString} from "../../utils/dom-utils.js";
 
 class ConfusingLinks {
     getLabel = () => {
@@ -14,7 +15,8 @@ class ConfusingLinks {
         // TODO make fuzzy string comparison - for now exacts
         let links = [...document.getElementsByTagName('a')].filter(notDisplayPanel).filter(isVisible);
         let similarLabels = links.reduce((acc, link) => {
-            acc[link.innerText] = (acc[link.innerText] || []).concat(link);
+            let textHash = hashString(link.innerText);
+            acc[textHash] = (acc[textHash] || []).concat(link);
             return acc;
         }, {});
         let repeatingLabels = Object.keys(similarLabels).filter(k => similarLabels[k].length > 1).map(k => similarLabels[k]);
