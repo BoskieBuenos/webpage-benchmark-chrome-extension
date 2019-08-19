@@ -68,6 +68,15 @@ class Benchmarks {
         // AmbiguousLetterAbbreviation // Same as NotUnderstandableTerminology
     ];
 
+    getEntries = () => {
+        return this.benchmarks.map((benchmark) => benchmark.getLabel());
+    };
+
+    getBenchmarks = () => {
+        // TODO keep initialized objects
+        return this.benchmarks;
+    };
+
     evaluate = (performanceRegistry) => {
         let result = this.benchmarks.map((benchmark) => {
             return this.p(`${benchmark.getLabel()}: ${benchmark.execute({performanceRegistry})}`);
@@ -83,4 +92,4 @@ class Benchmarks {
     };
 }
 
-export default new Benchmarks();
+export default Benchmarks;
