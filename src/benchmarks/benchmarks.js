@@ -52,11 +52,11 @@ class Benchmarks {
         TooLongParagraphs,
         SmallFont,
         LowBackgroundFontContrast,
-        TooMuchCenteredText,
+        // TooMuchCenteredText, // FIXME Extremely low performance
         FixedBarTooBigCoveringContent,
         NotUnderstandableTerminology,
         NoSocialSignUp,
-        // BrokenLinks,
+        // BrokenLinks, // FIXME
         LackOfPerformance,
         NoSearchBar,
         NoDefaultValues,

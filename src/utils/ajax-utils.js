@@ -3,7 +3,7 @@ const requestCache = {};
 function handleDoneRequest(xhr, resolve, reject) {
     return () => {
         if (xhr.readyState === 4) { // request done
-            if (xhr.status !== 404) {
+            if (xhr.status === 404) {
                 reject(xhr.statusText);
             } else if (xhr.status < 400) {
                 resolve(xhr.responseText)
