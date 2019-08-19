@@ -16,8 +16,12 @@ function handleDoneRequest(xhr, resolve, reject) {
 
 export function checkExistance(url, method = 'GET') {
     if (requestCache[url]) {
+        if (requestCache[url].status === 'pending'){
+            return requestCache[url].promise;
+        }
+
         return new Promise((resolve, reject) => {
-            if (requestCache[url].rejected) {
+            if (requestCache[url].status === 'rejected') {
                 reject(requestCache[url].result);
             } else {
                 resolve(requestCache[url].result);
@@ -30,9 +34,10 @@ export function checkExistance(url, method = 'GET') {
         xhr.onreadystatechange = handleDoneRequest(xhr, resolve, reject);
         xhr.send();
     });
+    requestCache[url] = {status: 'pending', promise};
 
-    promise.then((result) => requestCache[url] = {rejected: false, result});
-    promise.catch((result) => requestCache[url] = {rejected: true, result});
+    promise.then((result) => requestCache[url] = {status: 'resolved', result});
+    promise.catch((result) => requestCache[url] = {status: 'rejected', result});
 
     return promise;
 }
