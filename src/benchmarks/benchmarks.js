@@ -56,7 +56,7 @@ class Benchmarks {
         FixedBarTooBigCoveringContent,
         NotUnderstandableTerminology,
         NoSocialSignUp,
-        BrokenLinks,
+        // BrokenLinks,
         LackOfPerformance,
         NoSearchBar,
         NoDefaultValues,

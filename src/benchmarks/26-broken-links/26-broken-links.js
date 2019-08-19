@@ -1,4 +1,5 @@
 import {isVisible, notDisplayPanel} from "../filters.js";
+import {checkExistance} from "../../utils/ajax-utils.js";
 
 const resultElementId = 'wbce-result-26';
 
@@ -12,24 +13,8 @@ class BrokenLinks {
             .filter(notDisplayPanel)
             .filter(isVisible)
             .filter(link => link.href.length > 0);
-        let promises = Promise.all(allLinks.map(link => {
-            const url = link.href;
-            return new Promise((resolve, reject) => {
-                const xhr = new XMLHttpRequest();
-                xhr.open("GET", url);
-                xhr.onload = () => {
-                    if (xhr.status !== 404) {
-                        resolve(xhr.responseText)
-                    } else {
-                        reject(xhr.statusText);
-                    }
-                };
-                xhr.onerror = () => {
-                    reject(xhr.statusText);
-                };
-                xhr.send();
-            })
-        }));
+
+        let promises = Promise.all(allLinks.map(link => checkExistance(link.href)));
         promises.then((result) => {
             document.getElementById(resultElementId).innerText = 'All links are OK'
         });

@@ -8,8 +8,13 @@ const isVisibleInput = (element) => {
 const groupByRequiredAndLabel = (inputs, input) => {
     let isRequired = input.required || attributeContains('aria-required', 'true')(input);
     let group = isRequired ? inputs.required : inputs.default;
-    let labelledInput = {input, label: document.querySelector(`label[for=${input.id}]`)};
-    group.push(labelledInput);
+    if (input.id) {
+        let inputLabel = document.querySelector(`label[for=${input.id}]`);
+        if (inputLabel) {
+            let labelledInput = {input, label: inputLabel};
+            group.push(labelledInput);
+        }
+    }
     return inputs;
 };
 
