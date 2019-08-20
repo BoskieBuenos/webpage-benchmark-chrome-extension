@@ -59,29 +59,10 @@ let refreshBenchmarks = (mutationsList, observer) => {
         lastRefresh = Date.now();
 
         benchmarks.getBenchmarks().forEach((benchmark, index) => {
-            document.getElementById(`wbce-test-entry-${index}`).innerHTML = `${benchmark.getLabel()}:<br>${benchmark.execute({performanceRegistry})}`;
+            document.getElementById(`wbce-test-entry-${index}`).innerHTML = `<strong>${benchmark.getLabel()}:</strong><br>${benchmark.execute({performanceRegistry})}`;
         });
     }
 };
-
-// let refreshBenchmarks = (mutationsList, observer) => {
-//     let isNotExtensionChanged = mutationsList.filter(({target}) => notDisplayPanel(target)).length > 0;
-//     let timespan = Date.now() - lastRefresh;
-//     if (isNotExtensionChanged && timespan > 100) {
-//         lastRefresh = Date.now();
-//         while (displayPanel.firstChild) {
-//             displayPanel.removeChild(displayPanel.firstChild);
-//         }
-//
-//         let displayPanelHeading = document.createElement('p');
-//         displayPanelHeading.classList.add('wbce-benchmark');
-//         displayPanelHeading.innerHTML = 'Benchmarks:';
-//         displayPanel.appendChild(displayPanelHeading);
-//
-//         let evals = Benchmarks.evaluate(performanceRegistry);
-//         evals.forEach(p => displayPanel.appendChild(p));
-//     }
-// };
 
 let bodyModificationObserver = new MutationObserver(refreshBenchmarks);
 refreshBenchmarks([{target: body}]); // init is required for static pages
