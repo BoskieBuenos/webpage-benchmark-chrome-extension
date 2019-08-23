@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            background-image: url('site-content.png');
+            background-position: center top;
+            background-size: cover;
+        }
+        .navbar .collapse > ul ul li:hover > ul {
+            display: block;
+            left: 100%;
+            top: 0
+        }
+    </style>
+</head>
+<meta charset="UTF-8">
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="clothingDropdown" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Clothing</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                    <!--<li><a class="dropdown-item" href="#">ALL CLOTHING</a></li>-->
+                    <!--<div class="dropdown-divider"></div>-->
+                    <!--<li><a class="dropdown-item" href="#">T-Shirts</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Shirts</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Jumpers & Cardigans</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Jackets</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Coats</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Jeans</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Trousers & Shorts</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Suits & Ties</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Sports Clothing</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Underwear</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Socks</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Swimwear</a></li>-->
+
+                    <li class="dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="clothingUpperGarmentsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Upper garments</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">T-Shirts</a></li>
+                            <li><a class="dropdown-item" href="#">Shirts</a></li>
+                            <li><a class="dropdown-item" href="#">Jumpers & Cardigans</a></li>
+                            <li><a class="dropdown-item" href="#">Jackets</a></li>
+                            <li><a class="dropdown-item" href="#">Coats</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="clothingTrousersDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trousers</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Jeans</a></li>
+                            <li><a class="dropdown-item" href="#">Trousers & Shorts</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="clothingAccessoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accessories</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Suits & Ties</a></li>
+                            <li><a class="dropdown-item" href="#">Sports Clothing</a></li>
+                            <li><a class="dropdown-item" href="#">Underwear</a></li>
+                            <li><a class="dropdown-item" href="#">Socks</a></li>
+                            <li><a class="dropdown-item" href="#">Swimwear</a></li>
+                            <!--<li class="dropdown">-->
+                                <!--<a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown3</a>-->
+                                <!--<ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+                                    <!--<li><a href="#">Action</a></li>-->
+                                    <!--<li><a href="#">Another action</a></li>-->
+                                    <!--<li><a href="#">Something else here</a></li>-->
+                                <!--</ul>-->
+                            <!--</li>-->
+                        </ul>
+                    </li>
+
+                    <!--Jumpers & Cardigans-->
+                    <!--Shirts-->
+                    <!--Socks-->
+                    <!--Sports Clothing-->
+                    <!--Suits & Ties-->
+                    <!--Swimwear-->
+                    <!--T-Shirts-->
+                    <!--Trousers & Shorts-->
+                    <!--Underwear-->
+
+                    <!--=== Popularne podkategorie:-->
+
+                    <!--Blazers-->
+                    <!--Bomber Jackets-->
+                    <!--Denim Jackets-->
+                    <!--Casual Shirts-->
+                    <!--Formal Shirts-->
+                    <!--Hoodies-->
+
+                    <!--=== Kategorie główne:-->
+
+                        <!--=== Top wardrobe / Upper garments-->
+                    <!--T-shirty i koszulki               T-Shirts-->
+                    <!--Koszule                           Shirts-->
+                    <!--Bluzy i swetry                    Jumpers & Cardigans-->
+                    <!--Kurtki i marynarki                Jackets-->
+                    <!--Płaszcze                          Coats-->
+                        <!--=== Trousers-->
+                    <!--Jeansy                            Jeans-->
+                    <!--Spodnie                           Trousers & Shorts-->
+                        <!--=== Accessories-->
+                    <!--Garnitury i akcesoria             Suits & Ties-->
+                    <!--Odzież sportowa                   Sports Clothing-->
+                    <!--Bielizna i piżamy                 Underwear-->
+                    <!--Skarpety                          Socks-->
+                    <!--Moda plażowa                      Swimwear-->
+
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="shoesDropdown" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Shoes</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                    <!--<li><a class="dropdown-item" href="#">ALL SHOES</a></li>-->
+                    <!--<div class="dropdown-divider"></div>-->
+                    <!--<li><a class="dropdown-item" href="#">Boat Shoes</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Boots</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Brogues</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Casual Shoes</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Derbies & Oxfords</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Designer Trainers</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Espadrilles</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Formal Shoes</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">High Tops</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Loafers</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Outdoor Shoes</a></li>-->
+
+                    <li class="dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="shoesHighBootsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">High boots (Buty wysokie)</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Boots</a></li>
+                            <li><a class="dropdown-item" href="#">Outdoor Shoes</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="shoesLowShoesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Low shoes (Buty niskie)</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Trainers</a></li>
+                            <li><a class="dropdown-item" href="#">Casual Shoes</a></li>
+                            <li><a class="dropdown-item" href="#">??? (Półbuty)</a></li>
+                            <li><a class="dropdown-item" href="#">Formal Shoes</a></li>
+                            <li><a class="dropdown-item" href="#">Sports Shoes</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="shoesOpenFootwearDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Open footwear (Otwarte obuwie)</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Slides & Clogs + Sandals</a></li>
+                            <li><a class="dropdown-item" href="#">Slippers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#" id="shoesAccessoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shoes accessories</a>
+                    </li>
+
+                        <!--=== High boots (Buty wysokie) -->
+                    <!--Buty z wysoką cholewką                  Boots-->
+                    <!--Obuwie outdoorowe                       Outdoor Shoes-->
+                        <!--=== Low shoes (Buty niskie) -->
+                    <!--Trampki i sneakersy                     Trainers-->
+                    <!--Obuwie sznurowane                       Casual Shoes-->
+                    <!--Półbuty                                 ???-->
+                    <!--Obuwie biznesowe                        Formal Shoes-->
+                    <!--Obuwie sportowe                         Sports Shoes-->
+                        <!--=== Open footwear (Otwarte obuwie) -->
+                    <!--Obuwie letnie                           Slides & Clogs + Sandals-->
+                    <!--Kapcie                                  Slippers-->
+                        <!--=== Akcesoria do butów                      Shoes accessories-->
+
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="sportsDropdown" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Sports</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                    <!--<li><a class="dropdown-item" href="#">SHOP BY SPORT</a></li>-->
+                    <!--<div class="dropdown-divider"></div>-->
+                    <!--<li><a class="dropdown-item" href="#">All Sports</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">American Sports</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Basketball</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Cycling</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Fitness</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Football</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Golf</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Outdoor</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Running</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Swimming</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Tennis</a></li>-->
+
+                    <li class="dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="sportsClothingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clothing</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Sports Clothing</a></li>
+                            <li><a class="dropdown-item" href="#">Sports Shoes</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="sportsGearDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gear</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Equipment</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="sportsAccessoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accessories</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Rucksacks</a></li>
+                            <li><a class="dropdown-item" href="#">Bags</a></li>
+                            <li><a class="dropdown-item" href="#">Accessories</a></li>
+                        </ul>
+                    </li>
+
+                        <!--=== Clothing -->
+                    <!--Odzież sportowa                     Sports Clothing-->
+                    <!--Obuwie sportowe                     Sports Shoes-->
+                        <!--=== Gear -->
+                    <!--Sprzęt                              Equipment-->
+                        <!--=== Accessories -->
+                    <!--Plecaki                             Rucksacks-->
+                    <!--Torby i walizki                     Bags-->
+                    <!--Akcesoria                           Accessories-->
+
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="accessoriesDropdown" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Accessories</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                    <!--<li><a class="dropdown-item" href="#">ALL ACCESSORIES</a></li>-->
+                    <!--<div class="dropdown-divider"></div>-->
+                    <!--<li><a class="dropdown-item" href="#">Bags</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Belts</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Bracelets</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Designer Bags</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Gloves</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Hats & Caps</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Headphones</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Jewellery</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Laptop Bags</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Rings</a></li>-->
+                    <!--<li><a class="dropdown-item" href="#">Rucksacks</a></li>-->
+
+                    <li class="dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="accessoriesJewelleryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jewellery (biżuteria)</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Jewellery</a></li>
+                            <li><a class="dropdown-item" href="#">Watches</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="accessoriesWearablesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wearables (ubiór)</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Hats & Caps</a></li>
+                            <li><a class="dropdown-item" href="#">Belts</a></li>
+                            <li><a class="dropdown-item" href="#">Ties & Accessories</a></li>
+                            <li><a class="dropdown-item" href="#">Gloves</a></li>
+                            <li><a class="dropdown-item" href="#">Scarves</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="accessoriesCarryingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Carrying (przenoszenie)</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Bags</a></li>
+                            <li><a class="dropdown-item" href="#">Wallets</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="accessoriesUtilitiesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Utilities</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Sunglasses</a></li>
+                            <li><a class="dropdown-item" href="#">Headphones</a></li>
+                            <li><a class="dropdown-item" href="#">Umbrellas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#" id="shoesOthersDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+                    </li>
+
+                        <!--=== Jewellery (biżuteria) -->
+                    <!--Biżuteria                               Jewellery-->
+                    <!--Zegarki                                 Watches-->
+                        <!--=== Wearables (ubiór) -->
+                    <!--Czapki i kapelusze                      Hats & Caps-->
+                    <!--Paski                                   Belts-->
+                    <!--Krawaty i akcesoria                     Ties & Accessories-->
+                    <!--Rękawiczki                              Gloves-->
+                    <!--Chusty i szaliki                        Scarves-->
+                        <!--=== Carrying (przenoszenie) -->
+                    <!--Torby i plecaki                         Bags-->
+                    <!--Portfele i etui                         Wallets-->
+                        <!--=== Utilities -->
+                    <!--Okulary przeciwsłoneczne                Sunglasses-->
+                    <!--Słuchawki                               Headphones-->
+                    <!--Parasole                                Umbrellas-->
+                        <!--=== Pozostałe    Other -->
+
+                </ul>
+            </li>
+        </ul>
+        <span class="navbar-text">
+          Too many levels (basic)
+        </span>
+    </div>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
