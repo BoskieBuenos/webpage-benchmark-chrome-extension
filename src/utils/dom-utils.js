@@ -66,7 +66,7 @@ function contrastRgb(rgb1, rgb2) {
 }
 
 export function contrast(color1, color2) {
-    color1[3] |= 1;
+    color1[3] |= 1; // TODO fails for rgba(0,0,0,0) - should be ?=
     color2[3] |= 1;
     return contrastRgba(color1, color2);
 }
@@ -137,7 +137,7 @@ export function parseColor(color) {
         color = getComputedStyle(tempElem).color;
         document.body.removeChild(tempElem);
     }
-    if (color.indexOf('rgb') === 0) {
+    if (color.indexOf('rgb') === 0) { // TODO Not working for rgba(0,0,0,0)
         if (color.indexOf('rgba') === -1)
             color += ',1'; // convert 'rgb(R,G,B)' to 'rgb(R,G,B)A' which looks awful but will pass the regxep below
         return color.match(/[\.\d]+/g).map(function (a) {
