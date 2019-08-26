@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro&display=swap');
+
+body, html {
+    margin: 0;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: flex-start;*/
+    align-items: stretch;
+}
+
+html * {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.container {
+    max-width: 1140px;
+    /*margin: auto;*/
+}
+
+button {
+    font-size: 17px;
+    font-family: 'Playfair Display', serif;
+
+    border: 2px solid #cacaca;
+}
+
+input, textarea {
+    font-size: 17px;
+}
+
+/*header {*/
+    /*height: 70px;*/
+    /*background-color: #f3f2f3;*/
+    /*border-bottom: 1px solid #cacaca;*/
+/*}*/
+
+/*header .container {*/
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+    /*height: 100%;*/
+/*}*/
+
+/*.logo {*/
+    /*width: 300px;*/
+    /*height: 50px;*/
+    /*background-image: url("../images/logo.png");*/
+    /*background-size: contain;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+
+.button {
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    height: 35px;
+    width: 100px;
+    background-color: #43b472;
+}
+
+.button-main {
+    /*padding: 35px;*/
+    margin-top: 30px;
+    min-width: 300px;
+}
+
+.button-header {
+    width: 90px;
+}
+
+.button-edit {
+    border-right: 1px solid #cacaca;
+}
+
+.button-add {
+    color: white;
+    /*background-color: white;*/
+    font-weight: 900;
+    font-size: 21px;
+}
+
+.button-substract {
+    color: white;
+    /*background-color: white;*/
+    font-weight: 900;
+    font-size: 21px;
+    background-color: #C97064;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-item {
+    width: 200px;
+    margin-top: 30px;
+    border: 1px solid #cacaca;
+    background-color: #f3f2f3;
+}
+
+.gallery .image-box {
+    display: flex;
+    flex-direction: column;
+    /*align-content: flex-start;*/
+    /*height: 200px;*/
+    align-items: center;
+}
+
+.gallery .image-box .image {
+    display: flex;
+    flex-direction: column-reverse;
+    /*align-content: flex-start;*/
+    height: 135px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .image-box .image .label {
+    font-family: 'Playfair Display', serif;
+    background-color: #f3f2f3;
+    margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.gallery .gallery-item-buttons {
+    display: flex;
+    align-items: baseline;
+    background-color: white;
+    font-size: 15px;
+}
+
+.gallery .gallery-item-buttons input {
+    place-self: flex-start;
+    text-align: right;
+    padding: 1px 0;
+    min-width: 100px;
+    height: 33px;
+    border-width: 0;
+    background-color: transparent;
+}
+
+.gallery .gallery-item-buttons .unit {
+    background-color: transparent;
+    padding-right: 5px;
+}
+
+@media screen and (max-width: 400px) {
+    .gallery {
+        justify-content: center;
+    }
+
+    .logo {
+        height: 36px;
+    }
+}
+
+.vegetable .image:after {
+    color: white;
+    bottom: 0;
+}
+
+.vegetable .image .label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vegetable .image .label:after {
+    content: '5,00zł/kg';
+}
+
+.vegetable:nth-child(10n+1) .image {
+    background-image: url("./images/brocoli.jpg");
+    background-position-y: 80%;
+}
+
+.vegetable:nth-child(10n+1) .image .label:before {
+    content: 'Brokuł';
+}
+
+.vegetable:nth-child(10n+2) .image {
+    background-image: url("./images/carrot.jpg");
+}
+
+.vegetable:nth-child(10n+2) .image .label:before {
+    content: 'Marchew';
+}
+
+.vegetable:nth-child(10n+3) .image {
+    background-image: url("./images/chilli.jpg");
+}
+
+.vegetable:nth-child(10n+3) .image .label:before {
+    content: 'P. chilli';
+}
+
+.vegetable:nth-child(10n+4) .image {
+    background-image: url("./images/cucumber.jpg");
+}
+
+.vegetable:nth-child(10n+4) .image .label:before {
+    content: 'Ogórek';
+}
+
+.vegetable:nth-child(10n+5) .image {
+    background-image: url("./images/eggplant.jpg");
+}
+
+.vegetable:nth-child(10n+5) .image .label:before {
+    content: 'Bakłażan';
+}
+
+.vegetable:nth-child(10n+6) .image {
+    background-image: url("./images/garlic.jpg");
+}
+
+.vegetable:nth-child(10n+6) .image .label:before {
+    content: 'Czosnek';
+}
+
+.vegetable:nth-child(10n+7) .image {
+    background-image: url("./images/mashroom.jpg");
+}
+
+.vegetable:nth-child(10n+7) .image .label:before {
+    content: 'Pieczarki';
+}
+
+.vegetable:nth-child(10n+8) .image {
+    background-image: url("./images/paprica.jpg");
+}
+
+.vegetable:nth-child(10n+8) .image .label:before {
+    content: 'Papryka';
+}
+
+.vegetable:nth-child(10n+9) .image {
+    background-image: url("./images/pumpkin.jpg");
+}
+
+.vegetable:nth-child(10n+9) .image .label:before {
+    content: 'Dynia';
+}
+
+.vegetable:nth-child(10n+10) .image {
+    background-image: url("./images/beetroot.jpg");
+}
+
+.vegetable:nth-child(10n+10) .image .label:before {
+    content: 'Burak';
+}
+
+header#banner,
+section#banner {
+    background-image: url("./images/grocery-bcg1.jpg");
+    background-position: bottom;
+    background-size: cover;
+
+    /*min-height: 20vh;*/
+    background-color: #C97064;
+    color: #C97064;
+    /*text-align: center;*/
+}
+
+header#banner .logo,
+section#banner .logo {
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 10px;
+    margin-left: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 7px;
+    text-decoration: underline;
+    background-color: #f3f2f3;
+}
+
+section#products,
+section#checkout-form {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+section#order-summary {
+    display: flex;
+    /*flex-direction: column;*/
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    background-color: #f3f2f3;
+}
+
+section#order-summary .container {
+    /*width: 100%;*/
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+section#checkout-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section#checkout-form form input,
+section#checkout-form form textarea {
+    min-width: 400px;
+}
+
+section#checkout,
+section#checkout-form {
+    flex: 1;
+}
+
+section#checkout {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+section#search {
+    display: flex;
+    background-color: #f3f2f3;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+form[role=search] {
+    margin-bottom: 30px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form[role=search] div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+form[role=search] h2 {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+form[role=search] div#search-bar {
+    justify-content: space-between;
+}
+
+form[role=search] div#categories {
+    justify-content: center;
+}
+
+form[role=search] div#categories button {
+    background-color: transparent;
+    padding: 10px 25px;
+    margin: 5px;
+}
+
+input, textarea {
+    padding: 12px 24px;
+    border: 1px solid #cacaca;
+    color: #575756;
+}
+
+form[role=search] div#search-bar input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    /*width: 100%;*/
+    padding: 12px 24px;
+
+    background-color: white;
+    transition: transform 250ms ease-in-out;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #575756;
+    /*         background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg); */
+
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+    /*border-radius: 50px;*/
+    border: 1px solid #cacaca;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+footer {
+    background-color: #C97064;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+.order-summary-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+.order-summary-item .content {
+    flex:1;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.order-summary-item .image {
+    background-size: cover;
+    height: 50px;
+    min-width: 50px;
+}
