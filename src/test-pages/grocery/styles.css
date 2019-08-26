@@ -39,6 +39,9 @@ button {
 
 input, textarea {
     font-size: 17px;
+    padding: 12px 24px;
+    border: 1px solid #cacaca;
+    color: #575756;
 }
 
 /*header {*/
@@ -86,18 +89,22 @@ input, textarea {
 }
 
 .button-add {
-    color: white;
+    /*color: white;*/
+    color: #43b472;
     /*background-color: white;*/
+    background-color: #f3f2f3;
     font-weight: 900;
     font-size: 21px;
 }
 
 .button-substract {
-    color: white;
+    /*color: white;*/
+    color: #C97064;
     /*background-color: white;*/
+    background-color: #f3f2f3;
+    /*background-color: #C97064;*/
     font-weight: 900;
     font-size: 21px;
-    background-color: #C97064;
 }
 
 .gallery {
@@ -188,7 +195,7 @@ input, textarea {
 }
 
 .vegetable:nth-child(10n+1) .image {
-    background-image: url("./images/brocoli.jpg");
+    background-image: url("./images/normal/brocoli.jpg");
     background-position-y: 80%;
 }
 
@@ -197,7 +204,7 @@ input, textarea {
 }
 
 .vegetable:nth-child(10n+2) .image {
-    background-image: url("./images/carrot.jpg");
+    background-image: url("./images/normal/carrot.jpg");
 }
 
 .vegetable:nth-child(10n+2) .image .label:before {
@@ -205,7 +212,7 @@ input, textarea {
 }
 
 .vegetable:nth-child(10n+3) .image {
-    background-image: url("./images/chilli.jpg");
+    background-image: url("./images/normal/chilli.jpg");
 }
 
 .vegetable:nth-child(10n+3) .image .label:before {
@@ -213,7 +220,7 @@ input, textarea {
 }
 
 .vegetable:nth-child(10n+4) .image {
-    background-image: url("./images/cucumber.jpg");
+    background-image: url("./images/normal/cucumber.jpg");
 }
 
 .vegetable:nth-child(10n+4) .image .label:before {
@@ -221,7 +228,7 @@ input, textarea {
 }
 
 .vegetable:nth-child(10n+5) .image {
-    background-image: url("./images/eggplant.jpg");
+    background-image: url("./images/normal/eggplant.jpg");
 }
 
 .vegetable:nth-child(10n+5) .image .label:before {
@@ -229,7 +236,7 @@ input, textarea {
 }
 
 .vegetable:nth-child(10n+6) .image {
-    background-image: url("./images/garlic.jpg");
+    background-image: url("./images/normal/garlic.jpg");
 }
 
 .vegetable:nth-child(10n+6) .image .label:before {
@@ -237,7 +244,7 @@ input, textarea {
 }
 
 .vegetable:nth-child(10n+7) .image {
-    background-image: url("./images/mashroom.jpg");
+    background-image: url("./images/normal/mashroom.jpg");
 }
 
 .vegetable:nth-child(10n+7) .image .label:before {
@@ -245,7 +252,7 @@ input, textarea {
 }
 
 .vegetable:nth-child(10n+8) .image {
-    background-image: url("./images/paprica.jpg");
+    background-image: url("./images/normal/paprica.jpg");
 }
 
 .vegetable:nth-child(10n+8) .image .label:before {
@@ -253,7 +260,7 @@ input, textarea {
 }
 
 .vegetable:nth-child(10n+9) .image {
-    background-image: url("./images/pumpkin.jpg");
+    background-image: url("./images/normal/pumpkin.jpg");
 }
 
 .vegetable:nth-child(10n+9) .image .label:before {
@@ -261,7 +268,7 @@ input, textarea {
 }
 
 .vegetable:nth-child(10n+10) .image {
-    background-image: url("./images/beetroot.jpg");
+    background-image: url("./images/normal/beetroot.jpg");
 }
 
 .vegetable:nth-child(10n+10) .image .label:before {
@@ -270,7 +277,7 @@ input, textarea {
 
 header#banner,
 section#banner {
-    background-image: url("./images/grocery-bcg1.jpg");
+    background-image: url("./images/normal/grocery-bcg1.jpg");
     background-position: bottom;
     background-size: cover;
 
@@ -382,12 +389,6 @@ form[role=search] div#categories button {
     background-color: transparent;
     padding: 10px 25px;
     margin: 5px;
-}
-
-input, textarea {
-    padding: 12px 24px;
-    border: 1px solid #cacaca;
-    color: #575756;
 }
 
 form[role=search] div#search-bar input {
