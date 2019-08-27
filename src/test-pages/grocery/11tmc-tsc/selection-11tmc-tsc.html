@@ -4,13 +4,44 @@
     <meta charset="UTF-8">
     <title>Grocery - pick your poison</title>
     <link rel="stylesheet" href="../styles.css">
+    <!--CHANGED. Issues addressed: 11.1, 11.2-->
+    <style>
+    .button-add, .button-subtract {
+            color: white;
+            width: 8mm;
+            height: 6mm;
+            align-self: center;
+            line-height: 1px;
+        }
+        .button-add {
+            background-color: #43b472;
+        }
+        .button-subtract {
+            background-color: #C97064;
+        }
+        .button-main {
+            padding: 0;
+            height: initial;
+            width: initial;
+            min-width: 0;
+        }
+        form[role=search] div#categories button {
+            padding: 0;
+            color: white;
+            background-color: #C97064;
+        }
+        .gallery .gallery-item-buttons input {
+            height: auto;
+        }
+    </style>
+    <!--CHANGED-->
 </head>
 <body>
 <header id="banner">
     <div class="logo">Grocery</div>
 </header>
 <!--<h1>Produkty</h1>-->
-<section id="search" class="container111">
+<section id="search">
     <form role="search">
         <div id="search-bar">
             <h2>Filtruj</h2>
@@ -24,7 +55,7 @@
         </div>
     </form>
 </section>
-<section id="products" class="container111">
+<section id="products">
     <h1>Produkty</h1>
     <div class="gallery container">
         <div class="gallery-item vegetable">
@@ -37,7 +68,7 @@
                 <input type="number" value="0"/>
                 <span class="unit">kg</span>
                 <button class="button button-add">+</button>
-                <button class="button button-substract">-</button>
+                <button class="button button-subtract">-</button>
             </div>
         </div>
         <div class="gallery-item vegetable">
@@ -50,7 +81,7 @@
                 <input type="number" value="0"/>
                 <span class="unit">kg</span>
                 <button class="button button-add">+</button>
-                <button class="button button-substract">-</button>
+                <button class="button button-subtract">-</button>
             </div>
         </div>
         <div class="gallery-item vegetable">
@@ -63,7 +94,7 @@
                 <input type="number" value="0"/>
                 <span class="unit">kg</span>
                 <button class="button button-add">+</button>
-                <button class="button button-substract">-</button>
+                <button class="button button-subtract">-</button>
             </div>
         </div>
         <div class="gallery-item vegetable">
@@ -76,7 +107,7 @@
                 <input type="number" value="0"/>
                 <span class="unit">kg</span>
                 <button class="button button-add">+</button>
-                <button class="button button-substract">-</button>
+                <button class="button button-subtract">-</button>
             </div>
         </div>
         <div class="gallery-item vegetable">
@@ -89,7 +120,7 @@
                 <input type="number" value="0"/>
                 <span class="unit">kg</span>
                 <button class="button button-add">+</button>
-                <button class="button button-substract">-</button>
+                <button class="button button-subtract">-</button>
             </div>
         </div>
         <div class="gallery-item vegetable">
@@ -102,7 +133,7 @@
                 <input type="number" value="0"/>
                 <span class="unit">kg</span>
                 <button class="button button-add">+</button>
-                <button class="button button-substract">-</button>
+                <button class="button button-subtract">-</button>
             </div>
         </div>
         <div class="gallery-item vegetable">
@@ -115,7 +146,7 @@
                 <input type="number" value="0"/>
                 <span class="unit">kg</span>
                 <button class="button button-add">+</button>
-                <button class="button button-substract">-</button>
+                <button class="button button-subtract">-</button>
             </div>
         </div>
         <div class="gallery-item vegetable">
@@ -128,7 +159,7 @@
                 <input type="number" value="0"/>
                 <span class="unit">kg</span>
                 <button class="button button-add">+</button>
-                <button class="button button-substract">-</button>
+                <button class="button button-subtract">-</button>
             </div>
         </div>
         <div class="gallery-item vegetable">
@@ -141,7 +172,7 @@
                 <input type="number" value="0"/>
                 <span class="unit">kg</span>
                 <button class="button button-add">+</button>
-                <button class="button button-substract">-</button>
+                <button class="button button-subtract">-</button>
             </div>
         </div>
         <div class="gallery-item vegetable">
@@ -154,12 +185,12 @@
                 <input type="number" value="0"/>
                 <span class="unit">kg</span>
                 <button class="button button-add">+</button>
-                <button class="button button-substract">-</button>
+                <button class="button button-subtract">-</button>
             </div>
         </div>
     </div>
 </section>
-<section id="checkout" class="container111">
+<section id="checkout">
     <button type="button" class="button button-main" onclick="window.location.href = './checkout.html';">ZAMÓW</button>
 </section>
 
