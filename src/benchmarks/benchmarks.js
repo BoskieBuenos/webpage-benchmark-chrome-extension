@@ -37,7 +37,7 @@ class Benchmarks {
     benchmarks = [
         MultiLevelNavigation,
         ComplexRegularForm,
-        TooMuchGoingOn,
+        // TooMuchGoingOn, // NOT IMPLEMENTED
         TooLittleGoingOn,
         InconsistentDesign,
         BadComposition,
@@ -54,14 +54,14 @@ class Benchmarks {
         LowBackgroundFontContrast,
         // TooMuchCenteredText, // FIXME Extremely low performance
         FixedBarTooBigCoveringContent,
-        NotUnderstandableTerminology,
-        NoSocialSignUp,
+        // NotUnderstandableTerminology, // NOT IMPLEMENTED
+        // NoSocialSignUp, // NOT IMPLEMENTED
         // BrokenLinks, // FIXME
         LackOfPerformance,
         NoSearchBar,
-        NoDefaultValues,
+        // NoDefaultValues, // NOT IMPLEMENTED
         NewWindowLinks,
-        LowAccessibility,
+        // LowAccessibility, // NOT IMPLEMENTED
         RequiredFieldsNotIndicated,
         // LinkCount,
         // H1,
