@@ -1,7 +1,7 @@
 import {css} from "../../utils/dom-utils.js";
 import {isVisible, notDisplayPanel} from "../filters.js";
 
-const fontSizeThreshold = 100; // TODO select sensible value
+const fontSizeThreshold = 14;
 
 class SmallFont {
     getLabel = () => {

@@ -12,6 +12,8 @@ body {
     align-items: stretch;
 }
 
+/* FONTS */
+
 html * {
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -21,9 +23,30 @@ h1, h2, h3, h4, h5, h6, .logo {
     font-weight: normal;
 }
 
+button,
+.gallery .image-box .image .label{
+    font-family: 'Playfair Display', serif;
+}
+
 h1 {
     font-size: 40px;
 }
+
+button, input, textarea {
+    font-size: 17px;
+}
+
+.button-add,
+.button-subtract {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.gallery .gallery-item-buttons {
+    font-size: 15px;
+}
+
+/* FONTS */
 
 .container {
     max-width: 1140px;
@@ -31,14 +54,10 @@ h1 {
 }
 
 button {
-    font-size: 17px;
-    font-family: 'Playfair Display', serif;
-
     border: 2px solid #cacaca;
 }
 
 input, textarea {
-    font-size: 17px;
     padding: 12px 24px;
     border: 1px solid #cacaca;
     color: #575756;
@@ -93,8 +112,6 @@ input, textarea {
     color: #43b472;
     /*background-color: white;*/
     background-color: #f3f2f3;
-    font-weight: 900;
-    font-size: 21px;
 }
 
 .button-subtract {
@@ -103,8 +120,6 @@ input, textarea {
     /*background-color: white;*/
     background-color: #f3f2f3;
     /*background-color: #C97064;*/
-    font-weight: 900;
-    font-size: 21px;
 }
 
 .gallery {
@@ -141,7 +156,6 @@ input, textarea {
 }
 
 .gallery .image-box .image .label {
-    font-family: 'Playfair Display', serif;
     background-color: #f3f2f3;
     margin: 5px;
     padding-left: 5px;
@@ -152,7 +166,6 @@ input, textarea {
     display: flex;
     align-items: baseline;
     background-color: white;
-    font-size: 15px;
 }
 
 .gallery .gallery-item-buttons input {
@@ -399,7 +412,7 @@ form[role=search] div#search-bar input {
 
     background-color: white;
     transition: transform 250ms ease-in-out;
-    font-size: 14px;
+    /*font-size: 14px;*/
     line-height: 18px;
 
     color: #575756;

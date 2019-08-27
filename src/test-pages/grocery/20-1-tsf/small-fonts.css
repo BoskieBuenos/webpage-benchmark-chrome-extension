@@ -1,0 +1,30 @@
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 19px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+button, input, textarea {
+    font-size: 11px;
+}
+
+.button-add,
+.button-subtract {
+    font-weight: 900;
+    font-size: 11px;
+}
+
+.gallery .gallery-item-buttons,
+.gallery .image-box .image .label{
+    font-size: 10px;
+}
+
+footer a {
+    font-size: 10px;
+}
