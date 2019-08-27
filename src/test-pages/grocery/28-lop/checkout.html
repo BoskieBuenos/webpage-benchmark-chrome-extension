@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grocery</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="hifi-styles.css">
+</head>
+<body>
+<header id="banner">
+    <div class="logo">Grocery</div>
+</header>
+
+<section id="order-summary">
+    <div class="container">
+
+        <h1>Finalizacja zamówienia</h1>
+        <div class="order-summary-item vegetable">
+            <div class="image"></div>
+            <div class="content">Brokół</div>
+            <div class="prize">
+                <span>masa: 0,5kg</span>
+                <span>cena: 8,12zł</span>
+            </div>
+        </div>
+
+        <div class="order-summary-item vegetable">
+            <div class="image"></div>
+            <div class="content">Marchew</div>
+            <div class="prize">
+                <span>masa: 1kg</span>
+                <span>cena: 3,78zł</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="checkout-form">
+    <form action="" class="container">
+        <h2>Gdzie Twoje zamówienie ma zostać dostarczone?</h2>
+        <label for="address">Adres*</label>
+        <input required type="text" id="address">
+        <label for="postcode">Kod pocztowy*</label>
+        <input required type="text" id="postcode">
+        <label for="city">Miasto*</label>
+        <input required type="text" id="city">
+
+        <h2>Jak możemy się z Tobą skontaktować?</h2>
+        <label for="phone">Telefon*</label>
+        <input required type="text" id="phone">
+
+        <label for="additional-info">Uwagi</label>
+        <textarea type="text" id="additional-info"></textarea>
+
+        <button class="button button-main" type="button">Zamawiam i płacę</button>
+    </form>
+</section>
+
+<footer>
+    <h2>Gwarantujemy jakość</h2>
+    <a href="certificates.html">Certyfikaty zdrowia naszych roślin i gleb</a>
+    <br>
+    <a href="farm-gallery.html">Zobacz nasze uprawy</a>
+</footer>
+
+</body>
+</html>
