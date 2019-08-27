@@ -1,0 +1,92 @@
+.vegetable:nth-child(10n+1) .image {
+    background-image: url("../images/lofi/brocoli.jpg") !important;
+    background-position-y: 80%;
+}
+
+.vegetable:nth-child(10n+1) .image .label:before {
+    content: 'Brokuł';
+}
+
+.vegetable:nth-child(10n+2) .image {
+    background-image: url("../images/lofi/carrot.jpg") !important;
+}
+
+.vegetable:nth-child(10n+2) .image .label:before {
+    content: 'Marchew';
+}
+
+.vegetable:nth-child(10n+3) .image {
+    background-image: url("../images/lofi/chilli.jpg") !important;
+}
+
+.vegetable:nth-child(10n+3) .image .label:before {
+    content: 'P. chilli';
+}
+
+.vegetable:nth-child(10n+4) .image {
+    background-image: url("../images/lofi/cucumber.jpg") !important;
+}
+
+.vegetable:nth-child(10n+4) .image .label:before {
+    content: 'Ogórek';
+}
+
+.vegetable:nth-child(10n+5) .image {
+    background-image: url("../images/lofi/eggplant.jpg") !important;
+}
+
+.vegetable:nth-child(10n+5) .image .label:before {
+    content: 'Bakłażan';
+}
+
+.vegetable:nth-child(10n+6) .image {
+    background-image: url("../images/lofi/garlic.jpg") !important;
+}
+
+.vegetable:nth-child(10n+6) .image .label:before {
+    content: 'Czosnek';
+}
+
+.vegetable:nth-child(10n+7) .image {
+    background-image: url("../images/lofi/mashroom.jpg") !important;
+}
+
+.vegetable:nth-child(10n+7) .image .label:before {
+    content: 'Pieczarki';
+}
+
+.vegetable:nth-child(10n+8) .image {
+    background-image: url("../images/lofi/paprica.jpg") !important;
+}
+
+.vegetable:nth-child(10n+8) .image .label:before {
+    content: 'Papryka';
+}
+
+.vegetable:nth-child(10n+9) .image {
+    background-image: url("../images/lofi/pumpkin.jpg") !important;
+}
+
+.vegetable:nth-child(10n+9) .image .label:before {
+    content: 'Dynia';
+}
+
+.vegetable:nth-child(10n+10) .image {
+    background-image: url("../images/lofi/beetroot.jpg") !important;
+}
+
+.vegetable:nth-child(10n+10) .image .label:before {
+    content: 'Burak';
+}
+
+header#banner,
+section#banner {
+    background-image: url("../images/lofi/grocery-bcg1.jpg") !important;
+    background-position: bottom;
+    background-size: cover;
+
+    /*min-height: 20vh;*/
+    background-color: #C97064;
+    color: #C97064;
+    /*text-align: center;*/
+}

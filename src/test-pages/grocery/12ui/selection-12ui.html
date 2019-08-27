@@ -2,46 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Grocery - pick your poison - 11tmc-tsc</title>
+    <title>Grocery - pick your poison - 12ui</title>
     <link rel="stylesheet" href="../styles.css">
-    <!--CHANGED. Issues addressed: 11.1, 11.2-->
-    <style>
-    .button-add, .button-subtract {
-            color: white;
-            width: 8mm;
-            height: 6mm;
-            align-self: center;
-            line-height: 1px;
-        }
-        .button-add {
-            background-color: #43b472;
-        }
-        .button-subtract {
-            background-color: #C97064;
-        }
-        .button-main {
-            padding: 0;
-            height: initial;
-            width: initial;
-            min-width: 0;
-        }
-        form[role=search] div#categories button {
-            padding: 0;
-            color: white;
-            background-color: #C97064;
-        }
-        .gallery .gallery-item-buttons input {
-            height: auto;
-        }
-    </style>
-    <!--CHANGED-->
+    <link rel="stylesheet" href="lofi-styles.css">
 </head>
 <body>
 <header id="banner">
     <div class="logo">Grocery</div>
 </header>
 <!--<h1>Produkty</h1>-->
-<section id="search">
+<section id="search" class="container111">
     <form role="search">
         <div id="search-bar">
             <h2>Filtruj</h2>
@@ -55,7 +25,7 @@
         </div>
     </form>
 </section>
-<section id="products">
+<section id="products" class="container111">
     <h1>Produkty</h1>
     <div class="gallery container">
         <div class="gallery-item vegetable">
@@ -190,7 +160,7 @@
         </div>
     </div>
 </section>
-<section id="checkout">
+<section id="checkout" class="container111">
     <button type="button" class="button button-main" onclick="window.location.href = './checkout.html';">ZAMÓW</button>
 </section>
 
