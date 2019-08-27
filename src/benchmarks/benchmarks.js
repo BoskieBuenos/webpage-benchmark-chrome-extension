@@ -56,7 +56,7 @@ class Benchmarks {
         FixedBarTooBigCoveringContent,
         // NotUnderstandableTerminology, // NOT IMPLEMENTED
         // NoSocialSignUp, // NOT IMPLEMENTED
-        // BrokenLinks, // FIXME
+        // BrokenLinks, // FIXME Extremely low performance
         LackOfPerformance,
         NoSearchBar,
         // NoDefaultValues, // NOT IMPLEMENTED
