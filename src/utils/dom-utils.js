@@ -55,7 +55,7 @@ export function luminanace(r, g, b) {
 }
 
 function contrastRgba(rgba1, rgba2) {
-    return rgba1[3] !== 0 || rgba2[3] !== 0 ? contrastRgb(rgba1, rgba2) : 1; // TODO handle semi-transparent background
+    return rgba1[3] !== 0 && rgba2[3] !== 0 ? contrastRgb(rgba1, rgba2) : 1; // TODO handle semi-transparent background
 }
 
 // Source: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
@@ -66,9 +66,9 @@ function contrastRgb(rgb1, rgb2) {
 }
 
 export function contrast(color1, color2) {
-    color1[3] |= 1; // TODO fails for rgba(0,0,0,0) - should be ?=
-    color2[3] |= 1;
-    return contrastRgba(color1, color2);
+    let colorArg1 = color1[3] === null ? color1.concat(1) : color1;
+    let colorArg2 = color2[3] === null ? color2.concat(1) : color2;
+    return contrastRgba(colorArg1, colorArg2);
 }
 
 export function getBackgroundColor(element) {
