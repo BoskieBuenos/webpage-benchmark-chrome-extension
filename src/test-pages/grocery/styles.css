@@ -298,6 +298,8 @@ section#banner {
     background-color: #C97064;
     color: #C97064;
     /*text-align: center;*/
+    
+    z-index: 1000;
 }
 
 header#banner .logo,
