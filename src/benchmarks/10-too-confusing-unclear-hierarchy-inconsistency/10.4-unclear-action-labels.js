@@ -4,7 +4,10 @@
 
 import {notDisplayPanel, isVisible} from "../filters.js";
 
-const MEANINGLESS_ACTION_LABELS = ['click here', 'ok', 'cancel']; // TODO Find better examples
+const MEANINGLESS_ACTION_LABELS = [
+    'click here', 'ok', 'cancel',
+    'kliknij tutaj', 'tutaj', 'anuluj'
+]; // TODO Find better examples
 
 class UnclearActionLabels {
     getLabel = () => {
