@@ -216,6 +216,7 @@ input, textarea {
     background-position-y: 80%;
 }
 
+.vegetable:nth-child(17n+1) .image~.content:before,
 .vegetable:nth-child(17n+1) .image .label:before {
     content: 'Brokuł';
 }
@@ -224,6 +225,7 @@ input, textarea {
     background-image: url("./images/normal/carrot.jpg");
 }
 
+.vegetable:nth-child(17n+2) .image~.content:before,
 .vegetable:nth-child(17n+2) .image .label:before {
     content: 'Marchew';
 }
@@ -232,6 +234,7 @@ input, textarea {
     background-image: url("./images/normal/chilli.jpg");
 }
 
+.vegetable:nth-child(17n+3) .image~.content:before,
 .vegetable:nth-child(17n+3) .image .label:before {
     content: 'P. chilli';
 }
@@ -240,6 +243,7 @@ input, textarea {
     background-image: url("./images/normal/cucumber.jpg");
 }
 
+.vegetable:nth-child(17n+4) .image~.content:before,
 .vegetable:nth-child(17n+4) .image .label:before {
     content: 'Ogórek';
 }
@@ -248,6 +252,7 @@ input, textarea {
     background-image: url("./images/normal/eggplant.jpg");
 }
 
+.vegetable:nth-child(17n+5) .image~.content:before,
 .vegetable:nth-child(17n+5) .image .label:before {
     content: 'Bakłażan';
 }
@@ -256,6 +261,7 @@ input, textarea {
     background-image: url("./images/normal/garlic.jpg");
 }
 
+.vegetable:nth-child(17n+6) .image~.content:before,
 .vegetable:nth-child(17n+6) .image .label:before {
     content: 'Czosnek';
 }
@@ -264,6 +270,7 @@ input, textarea {
     background-image: url("./images/normal/mashroom.jpg");
 }
 
+.vegetable:nth-child(17n+7) .image~.content:before,
 .vegetable:nth-child(17n+7) .image .label:before {
     content: 'Pieczarki';
 }
@@ -272,6 +279,7 @@ input, textarea {
     background-image: url("./images/normal/paprica.jpg");
 }
 
+.vegetable:nth-child(17n+8) .image~.content:before,
 .vegetable:nth-child(17n+8) .image .label:before {
     content: 'Papryka';
 }
@@ -280,6 +288,7 @@ input, textarea {
     background-image: url("./images/normal/pumpkin.jpg");
 }
 
+.vegetable:nth-child(17n+9) .image~.content:before,
 .vegetable:nth-child(17n+9) .image .label:before {
     content: 'Dynia';
 }
@@ -288,6 +297,7 @@ input, textarea {
     background-image: url("./images/normal/beetroot.jpg");
 }
 
+.vegetable:nth-child(17n+10) .image~.content:before,
 .vegetable:nth-child(17n+10) .image .label:before {
     content: 'Burak';
 }
@@ -296,6 +306,7 @@ input, textarea {
     background-image: url("./images/normal/apple.jpg");
 }
 
+.vegetable:nth-child(17n+11) .image~.content:before,
 .vegetable:nth-child(17n+11) .image .label:before {
     content: 'Jabłko';
 }
@@ -304,6 +315,7 @@ input, textarea {
     background-image: url("./images/normal/banana.jpg");
 }
 
+.vegetable:nth-child(17n+12) .image~.content:before,
 .vegetable:nth-child(17n+12) .image .label:before {
     content: 'Banan';
 }
@@ -312,6 +324,7 @@ input, textarea {
     background-image: url("./images/normal/blueberry.jpg");
 }
 
+.vegetable:nth-child(17n+13) .image~.content:before,
 .vegetable:nth-child(17n+13) .image .label:before {
     content: 'Jagoda';
 }
@@ -320,6 +333,7 @@ input, textarea {
     background-image: url("./images/normal/cherry.jpg");
 }
 
+.vegetable:nth-child(17n+14) .image~.content:before,
 .vegetable:nth-child(17n+14) .image .label:before {
     content: 'Wiśnia';
 }
@@ -329,6 +343,7 @@ input, textarea {
     background-position-y: 80%;
 }
 
+.vegetable:nth-child(17n+15) .image~.content:before,
 .vegetable:nth-child(17n+15) .image .label:before {
     content: 'Gruszka';
 }
@@ -337,6 +352,7 @@ input, textarea {
     background-image: url("./images/normal/pineapple.jpg");
 }
 
+.vegetable:nth-child(17n+16) .image~.content:before,
 .vegetable:nth-child(17n+16) .image .label:before {
     content: 'Ananas';
 }
@@ -345,6 +361,7 @@ input, textarea {
     background-image: url("./images/normal/strawberry.jpg");
 }
 
+.vegetable:nth-child(17n+17) .image~.content:before,
 .vegetable:nth-child(17n+17) .image .label:before {
     content: 'Truskawka';
 }
