@@ -1,2 +1,5 @@
 Pages that represent shopping application. The navigation contains the same categories of products. However, they have
 been organized in different ways. The categories layers number is the differentiating factor, here.
+
+oml - ok-many-levels
+tml - too-many-levels
