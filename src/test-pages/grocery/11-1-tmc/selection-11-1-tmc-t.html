@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grocery - pick your poison - 11-1-tmc</title>
+    <link rel="stylesheet" href="../styles.css">
+    <!--CHANGED. Issues addressed: 11.1 (tendentious)-->
+    <style>
+        .button-add, .button-subtract {
+            color: white;
+            align-self: center;
+            line-height: 1px;
+        }
+        button {
+            border-color: white;
+        }
+        .button-add {
+            background-color: #43b472;
+        }
+        .button-subtract {
+            background-color: #C97064;
+        }
+        form[role=search] div#categories button {
+            color: white;
+            background-color: #C97064;
+        }
+    </style>
+    <!--CHANGED-->
+</head>
+<body>
+<header id="banner">
+    <div class="logo">Grocery</div>
+</header>
+<!--<h1>Produkty</h1>-->
+<section id="search">
+    <form role="search">
+        <div id="search-bar">
+            <h2>Filtruj</h2>
+            <input type="text" placeholder="Wyszukaj produkt...">
+        </div>
+        <div id="categories">
+            <button type="button">Warzywa</button>
+            <button type="button">Owoce</button>
+            <button type="button">Zioła</button>
+            <button type="button">Korzenie</button>
+        </div>
+    </form>
+</section>
+<section id="products">
+    <h1>Produkty</h1>
+    <div class="gallery container">
+        <div class="gallery-item vegetable">
+            <div class="image-box">
+                <div class="image">
+                    <div class="label"></div>
+                </div>
+            </div>
+            <div class="gallery-item-buttons">
+                <input type="number" value="0"/>
+                <span class="unit">kg</span>
+                <button class="button button-add">+</button>
+                <button class="button button-subtract">-</button>
+            </div>
+        </div>
+        <div class="gallery-item vegetable">
+            <div class="image-box">
+                <div class="image">
+                    <div class="label"></div>
+                </div>
+            </div>
+            <div class="gallery-item-buttons">
+                <input type="number" value="0"/>
+                <span class="unit">kg</span>
+                <button class="button button-add">+</button>
+                <button class="button button-subtract">-</button>
+            </div>
+        </div>
+        <div class="gallery-item vegetable">
+            <div class="image-box">
+                <div class="image">
+                    <div class="label"></div>
+                </div>
+            </div>
+            <div class="gallery-item-buttons">
+                <input type="number" value="0"/>
+                <span class="unit">kg</span>
+                <button class="button button-add">+</button>
+                <button class="button button-subtract">-</button>
+            </div>
+        </div>
+        <div class="gallery-item vegetable">
+            <div class="image-box">
+                <div class="image">
+                    <div class="label"></div>
+                </div>
+            </div>
+            <div class="gallery-item-buttons">
+                <input type="number" value="0"/>
+                <span class="unit">kg</span>
+                <button class="button button-add">+</button>
+                <button class="button button-subtract">-</button>
+            </div>
+        </div>
+        <div class="gallery-item vegetable">
+            <div class="image-box">
+                <div class="image">
+                    <div class="label"></div>
+                </div>
+            </div>
+            <div class="gallery-item-buttons">
+                <input type="number" value="0"/>
+                <span class="unit">kg</span>
+                <button class="button button-add">+</button>
+                <button class="button button-subtract">-</button>
+            </div>
+        </div>
+        <div class="gallery-item vegetable">
+            <div class="image-box">
+                <div class="image">
+                    <div class="label"></div>
+                </div>
+            </div>
+            <div class="gallery-item-buttons">
+                <input type="number" value="0"/>
+                <span class="unit">kg</span>
+                <button class="button button-add">+</button>
+                <button class="button button-subtract">-</button>
+            </div>
+        </div>
+        <div class="gallery-item vegetable">
+            <div class="image-box">
+                <div class="image">
+                    <div class="label"></div>
+                </div>
+            </div>
+            <div class="gallery-item-buttons">
+                <input type="number" value="0"/>
+                <span class="unit">kg</span>
+                <button class="button button-add">+</button>
+                <button class="button button-subtract">-</button>
+            </div>
+        </div>
+        <div class="gallery-item vegetable">
+            <div class="image-box">
+                <div class="image">
+                    <div class="label"></div>
+                </div>
+            </div>
+            <div class="gallery-item-buttons">
+                <input type="number" value="0"/>
+                <span class="unit">kg</span>
+                <button class="button button-add">+</button>
+                <button class="button button-subtract">-</button>
+            </div>
+        </div>
+        <div class="gallery-item vegetable">
+            <div class="image-box">
+                <div class="image">
+                    <div class="label"></div>
+                </div>
+            </div>
+            <div class="gallery-item-buttons">
+                <input type="number" value="0"/>
+                <span class="unit">kg</span>
+                <button class="button button-add">+</button>
+                <button class="button button-subtract">-</button>
+            </div>
+        </div>
+        <div class="gallery-item vegetable">
+            <div class="image-box">
+                <div class="image">
+                    <div class="label"></div>
+                </div>
+            </div>
+            <div class="gallery-item-buttons">
+                <input type="number" value="0"/>
+                <span class="unit">kg</span>
+                <button class="button button-add">+</button>
+                <button class="button button-subtract">-</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="checkout">
+    <button type="button" class="button button-main" onclick="window.location.href = './checkout.html';">ZAMÓW</button>
+</section>
+
+<footer>
+    <h2>Gwarantujemy jakość</h2>
+    <a href="certificates.html">Certyfikaty zdrowia naszych roślin i gleb</a>
+    <br>
+    <a href="farm-gallery.html">Zobacz nasze uprawy</a>
+</footer>
+
+<script src="../../url-params-retriever.js"></script>
+</body>
+</html>
