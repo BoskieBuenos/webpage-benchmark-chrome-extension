@@ -369,7 +369,8 @@ input, textarea {
 header#banner,
 section#banner {
     background-image: url("./images/normal/grocery-bcg1.jpg");
-    background-position: bottom;
+    background-position-y: 73%;
+    /*background-position: bottom;*/
     background-size: cover;
 
     /*min-height: 20vh;*/
