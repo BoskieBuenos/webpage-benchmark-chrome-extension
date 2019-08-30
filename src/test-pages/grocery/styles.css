@@ -423,12 +423,16 @@ section#checkout-form form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+}
+
+section#checkout-form form label {
+    width: calc(400px + 50px);
 }
 
 section#checkout-form form input,
 section#checkout-form form textarea {
-    min-width: 400px;
+    width: 400px;
 }
 
 section#checkout,
